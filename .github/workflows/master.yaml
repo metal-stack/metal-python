@@ -1,7 +1,9 @@
-name: Publish
+name: Master
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -25,9 +27,4 @@ jobs:
       with:
         password: ${{ secrets.test_pypi_password }}
         repository_url: https://test.pypi.org/legacy/
-    - name: Publish📦 to PyPI
-      if: startsWith(github.ref, 'refs/tags')
-      uses: pypa/gh-action-pypi-publish@master
-      with:
-        password: ${{ secrets.pypi_password }}
-
+        skip_existing: true
