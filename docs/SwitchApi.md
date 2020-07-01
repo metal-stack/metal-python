@@ -1,0 +1,241 @@
+# metal_python.SwitchApi
+
+All URIs are relative to *https://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**delete_switch**](SwitchApi.md#delete_switch) | **DELETE** /v1/switch/{id} | deletes an switch and returns the deleted entity
+[**find_switch**](SwitchApi.md#find_switch) | **GET** /v1/switch/{id} | get switch by id
+[**list_switches**](SwitchApi.md#list_switches) | **GET** /v1/switch | get all switches
+[**notify_switch**](SwitchApi.md#notify_switch) | **POST** /v1/switch/{id}/notify | notify the metal-api about a configuration change of a switch
+[**register_switch**](SwitchApi.md#register_switch) | **POST** /v1/switch/register | register a switch
+
+
+# **delete_switch**
+> V1SwitchResponse delete_switch(id)
+
+deletes an switch and returns the deleted entity
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi()
+id = 'id_example' # str | identifier of the switch
+
+try:
+    # deletes an switch and returns the deleted entity
+    api_response = api_instance.delete_switch(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->delete_switch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| identifier of the switch | 
+
+### Return type
+
+[**V1SwitchResponse**](V1SwitchResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **find_switch**
+> V1SwitchResponse find_switch(id)
+
+get switch by id
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi()
+id = 'id_example' # str | identifier of the switch
+
+try:
+    # get switch by id
+    api_response = api_instance.find_switch(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->find_switch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| identifier of the switch | 
+
+### Return type
+
+[**V1SwitchResponse**](V1SwitchResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_switches**
+> list[V1SwitchResponse] list_switches()
+
+get all switches
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi()
+
+try:
+    # get all switches
+    api_response = api_instance.list_switches()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->list_switches: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[V1SwitchResponse]**](V1SwitchResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **notify_switch**
+> V1SwitchResponse notify_switch(id, body)
+
+notify the metal-api about a configuration change of a switch
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi()
+id = 'id_example' # str | identifier of the switch
+body = metal_python.V1SwitchNotifyRequest() # V1SwitchNotifyRequest | 
+
+try:
+    # notify the metal-api about a configuration change of a switch
+    api_response = api_instance.notify_switch(id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->notify_switch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| identifier of the switch | 
+ **body** | [**V1SwitchNotifyRequest**](V1SwitchNotifyRequest.md)|  | 
+
+### Return type
+
+[**V1SwitchResponse**](V1SwitchResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **register_switch**
+> V1SwitchResponse register_switch(body)
+
+register a switch
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi()
+body = metal_python.V1SwitchRegisterRequest() # V1SwitchRegisterRequest | 
+
+try:
+    # register a switch
+    api_response = api_instance.register_switch(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->register_switch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1SwitchRegisterRequest**](V1SwitchRegisterRequest.md)|  | 
+
+### Return type
+
+[**V1SwitchResponse**](V1SwitchResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
