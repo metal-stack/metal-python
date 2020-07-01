@@ -3,7 +3,7 @@ SWAGGER_VERSION := $(or ${SWAGGER_VERSION},2.4.14)
 
 .PHONY: generate-client
 generate-client:
-	echo "VERSION = '$(METAL_API_VERSION)'" > metal_python/version.py
+	echo "VERSION = '$(subst v,,$(METAL_API_VERSION))'" > metal_python/version.py
 	docker run --rm \
 	  -v ${PWD}:/workdir \
 	  -u $$(id -u):$$(id -g) \

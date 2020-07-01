@@ -1,7 +1,6 @@
 from metal_python.api_client import ApiClient
 from metal_python.configuration import Configuration
 from mock import MagicMock
-from metal_python.api.partition_api import PartitionApi
 import hmac
 from hashlib import sha256
 import random
