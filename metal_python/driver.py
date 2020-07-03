@@ -1,41 +1,52 @@
+import hmac
+import random
+import wrapt
+
+from abc import ABC
+from hashlib import sha256
+from datetime import datetime
+
 from metal_python.api_client import ApiClient
 from metal_python.configuration import Configuration
-from mock import MagicMock
-import hmac
-from hashlib import sha256
-import random
-from datetime import datetime
 
 
 class Driver:
-    HMAC_ENCODING = "utf-8"
+    HMAC_BYTES_ENCODING = "utf-8"
     SALT_LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     def __init__(self, url, bearer, hmac_key):
+        self.config = Configuration()
+        self.config.host = url
+
         if hmac_key:
-            config = Configuration()
-            config.host = url
-            c = ApiClient(configuration=config)
-            interceptor = MagicMock(wraps=c)
+            self.config.debug = True
+            client = ApiClient(configuration=self.config)
 
-            def auth(*args, **kwargs):
-                method = args[1]
-                t = datetime.utcnow().isoformat().split(".")[0] + "Z"
-                salt = self.random_string()
-                msg = bytes(t, Driver.HMAC_ENCODING) + bytes(method, Driver.HMAC_ENCODING) + bytes(salt,
-                                                                                                   Driver.HMAC_ENCODING)
-                signature = hmac.new(key=bytes(hmac_key, Driver.HMAC_ENCODING), msg=msg, digestmod=sha256).hexdigest()
+            # unfortunately, the generated swagger client does not allow adding specific authorization headers
+            # dynamically before a request (it only allows refreshing the auth token, but for calculating the token
+            # we also need the request method, which is not passed into the refresh function callback)
+            # therefore, we wrap the client and intercept the request method and add headers this way
+            class RequestWrapper(wrapt.ObjectProxy, ABC):
+                def __call__(self, method, u, **kwargs):
+                    t = datetime.utcnow().isoformat().split(".")[0] + "Z"
+                    salt = Driver.random_string()
 
-                c.set_default_header("X-Data-Salt", salt)
-                c.set_default_header("X-Date", t)
-                c.set_default_header("Authorization", "Metal-Admin " + signature)
+                    key = bytes(hmac_key, Driver.HMAC_BYTES_ENCODING)
+                    msg = bytes(t + method + salt, Driver.HMAC_BYTES_ENCODING)
+                    signature = hmac.new(key=key, msg=msg, digestmod=sha256).hexdigest()
 
-                return c.call_api(*args, **kwargs)
+                    current_headers = kwargs.get("headers", dict())
+                    auth_headers = {
+                        "X-Data-Salt": salt,
+                        "X-Date": t,
+                        "Authorization": "Metal-Admin " + signature,
+                    }
+                    kwargs["headers"] = {**current_headers, **auth_headers}
 
-            interceptor.call_api.side_effect = auth
-            interceptor.update_params_for_auth = None
+                    return self.__wrapped__(method, u, **kwargs)
 
-            self.client = interceptor
+            self.client = client
+            self.client.request = RequestWrapper(client.request)
         elif bearer:
             raise NotImplementedError("jwt bearer token auth not yet supported")
         else:
