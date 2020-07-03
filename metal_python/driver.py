@@ -20,7 +20,7 @@ class Driver:
 
         if hmac_key:
             self.config.debug = True
-            client = ApiClient(configuration=self.config)
+            self.client = ApiClient(configuration=self.config)
 
             # unfortunately, the generated swagger client does not allow adding specific authorization headers
             # dynamically before a request (it only allows refreshing the auth token, but for calculating the token
@@ -45,8 +45,7 @@ class Driver:
 
                     return self.__wrapped__(method, u, **kwargs)
 
-            self.client = client
-            self.client.request = RequestWrapper(client.request)
+            self.client.request = RequestWrapper(self.client.request)
         elif bearer:
             raise NotImplementedError("jwt bearer token auth not yet supported")
         else:
