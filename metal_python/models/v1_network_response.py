@@ -100,7 +100,8 @@ class V1NetworkResponse(object):
             self.description = description
         self.destinationprefixes = destinationprefixes
         self.id = id
-        self.labels = labels
+        if labels is not None:
+            self.labels = labels
         if name is not None:
             self.name = name
         self.nat = nat
@@ -257,8 +258,6 @@ class V1NetworkResponse(object):
         :param labels: The labels of this V1NetworkResponse.  # noqa: E501
         :type: dict(str, str)
         """
-        if labels is None:
-            raise ValueError("Invalid value for `labels`, must not be `None`")  # noqa: E501
 
         self._labels = labels
 
