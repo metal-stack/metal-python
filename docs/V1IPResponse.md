@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changed** | **datetime** | the last changed timestamp of this entity | 
-**created** | **datetime** | the creation time of this entity | 
+**changed** | **datetime** | the last changed timestamp of this entity | [optional] 
+**created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **ipaddress** | **str** | the address (ipv4 or ipv6) of this ip | 
 **name** | **str** | a readable name for this entity | [optional] 

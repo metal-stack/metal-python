@@ -24,8 +24,19 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = metal_python.SwitchApi()
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
 id = 'id_example' # str | identifier of the switch
 
 try:
@@ -48,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -70,8 +81,19 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = metal_python.SwitchApi()
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
 id = 'id_example' # str | identifier of the switch
 
 try:
@@ -94,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -116,8 +138,19 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = metal_python.SwitchApi()
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
 
 try:
     # get all switches
@@ -136,7 +169,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -158,8 +191,19 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = metal_python.SwitchApi()
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
 id = 'id_example' # str | identifier of the switch
 body = metal_python.V1SwitchNotifyRequest() # V1SwitchNotifyRequest | 
 
@@ -184,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 
@@ -206,8 +250,19 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = metal_python.SwitchApi()
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
 body = metal_python.V1SwitchRegisterRequest() # V1SwitchRegisterRequest | 
 
 try:
@@ -230,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
 
 ### HTTP request headers
 

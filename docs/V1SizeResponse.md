@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changed** | **datetime** | the last changed timestamp of this entity | 
+**changed** | **datetime** | the last changed timestamp of this entity | [optional] 
 **constraints** | [**list[V1SizeConstraint]**](V1SizeConstraint.md) | a list of constraints that defines this size | 
-**created** | **datetime** | the creation time of this entity | 
+**created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
 **name** | **str** | a readable name for this entity | [optional] 

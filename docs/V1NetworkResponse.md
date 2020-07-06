@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changed** | **datetime** | the last changed timestamp of this entity | 
-**created** | **datetime** | the creation time of this entity | 
+**changed** | **datetime** | the last changed timestamp of this entity | [optional] 
+**created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
 **id** | **str** | the unique ID of this entity | 

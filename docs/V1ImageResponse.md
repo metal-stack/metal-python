@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changed** | **datetime** | the last changed timestamp of this entity | 
+**changed** | **datetime** | the last changed timestamp of this entity | [optional] 
 **classification** | **str** | clasification of this image | [optional] 
-**created** | **datetime** | the creation time of this entity | 
+**created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **expiration_date** | **datetime** | expirationDate of this image | 
 **features** | **list[str]** | features of this image | [optional] 
