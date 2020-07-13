@@ -14,7 +14,7 @@ generate-client:
         -i https://raw.githubusercontent.com/metal-stack/metal-api/$(METAL_API_VERSION)/spec/metal-api.json \
         -l python \
         -o /workdir \
-        -c /workdir/config.json -Dmodels -Dapis
+        -c /workdir/config.json -Dmodels -Dapis -DpackageVersion=$(METAL_API_VERSION)
 
 METAL_API_SPEC_LOCAL_PATH := "../metal-api/spec/metal-api.json"
 .PHONY: generate-client-local
@@ -30,4 +30,4 @@ generate-client-local:
         -i /workdir/metal-api.json \
         -l python \
         -o /workdir \
-        -c /workdir/config.json -Dmodels -Dapis
+        -c /workdir/config.json -Dmodels -Dapis -DpackageVersion=$(METAL_API_VERSION)
