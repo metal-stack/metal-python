@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -104,7 +104,7 @@ class HealthApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['HMAC', 'jwt']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/health', 'GET',

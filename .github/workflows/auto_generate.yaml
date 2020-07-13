@@ -1,0 +1,26 @@
+name: Auto Generate
+
+on:
+  push:
+    branches:
+      - auto-generate/*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Generate
+      run: |
+        make generate-client
+    - name: Push
+      run: |
+        git config --global user.name "auto-build"
+        git config --global user.email "info@metal-stack.io"
+        git add .
+        git commit -m "Bump to version $(python3 -c 'from metal_python.version import VERSION; print(VERSION)')"
+        git push

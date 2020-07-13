@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bootconfig** | [**V1PartitionBootConfiguration**](V1PartitionBootConfiguration.md) | the boot configuration of this partition | 
-**changed** | **datetime** | the last changed timestamp of this entity | 
-**created** | **datetime** | the creation time of this entity | 
+**changed** | **datetime** | the last changed timestamp of this entity | [optional] 
+**created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
 **mgmtserviceaddress** | **str** | the address to the management service of this partition | [optional] 

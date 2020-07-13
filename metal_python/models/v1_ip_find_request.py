@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -62,13 +62,20 @@ class V1IPFindRequest(object):
         self._type = None
         self.discriminator = None
 
-        self.ipaddress = ipaddress
-        self.machineid = machineid
-        self.networkid = networkid
-        self.networkprefix = networkprefix
-        self.projectid = projectid
-        self.tags = tags
-        self.type = type
+        if ipaddress is not None:
+            self.ipaddress = ipaddress
+        if machineid is not None:
+            self.machineid = machineid
+        if networkid is not None:
+            self.networkid = networkid
+        if networkprefix is not None:
+            self.networkprefix = networkprefix
+        if projectid is not None:
+            self.projectid = projectid
+        if tags is not None:
+            self.tags = tags
+        if type is not None:
+            self.type = type
 
     @property
     def ipaddress(self):
@@ -90,8 +97,6 @@ class V1IPFindRequest(object):
         :param ipaddress: The ipaddress of this V1IPFindRequest.  # noqa: E501
         :type: str
         """
-        if ipaddress is None:
-            raise ValueError("Invalid value for `ipaddress`, must not be `None`")  # noqa: E501
 
         self._ipaddress = ipaddress
 
@@ -115,8 +120,6 @@ class V1IPFindRequest(object):
         :param machineid: The machineid of this V1IPFindRequest.  # noqa: E501
         :type: str
         """
-        if machineid is None:
-            raise ValueError("Invalid value for `machineid`, must not be `None`")  # noqa: E501
 
         self._machineid = machineid
 
@@ -140,8 +143,6 @@ class V1IPFindRequest(object):
         :param networkid: The networkid of this V1IPFindRequest.  # noqa: E501
         :type: str
         """
-        if networkid is None:
-            raise ValueError("Invalid value for `networkid`, must not be `None`")  # noqa: E501
 
         self._networkid = networkid
 
@@ -165,8 +166,6 @@ class V1IPFindRequest(object):
         :param networkprefix: The networkprefix of this V1IPFindRequest.  # noqa: E501
         :type: str
         """
-        if networkprefix is None:
-            raise ValueError("Invalid value for `networkprefix`, must not be `None`")  # noqa: E501
 
         self._networkprefix = networkprefix
 
@@ -190,8 +189,6 @@ class V1IPFindRequest(object):
         :param projectid: The projectid of this V1IPFindRequest.  # noqa: E501
         :type: str
         """
-        if projectid is None:
-            raise ValueError("Invalid value for `projectid`, must not be `None`")  # noqa: E501
 
         self._projectid = projectid
 
@@ -215,8 +212,6 @@ class V1IPFindRequest(object):
         :param tags: The tags of this V1IPFindRequest.  # noqa: E501
         :type: list[str]
         """
-        if tags is None:
-            raise ValueError("Invalid value for `tags`, must not be `None`")  # noqa: E501
 
         self._tags = tags
 
@@ -240,8 +235,6 @@ class V1IPFindRequest(object):
         :param type: The type of this V1IPFindRequest.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
 

@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -61,7 +61,8 @@ class V1IPUpdateRequest(object):
         self.ipaddress = ipaddress
         if name is not None:
             self.name = name
-        self.tags = tags
+        if tags is not None:
+            self.tags = tags
         self.type = type
 
     @property
@@ -155,8 +156,6 @@ class V1IPUpdateRequest(object):
         :param tags: The tags of this V1IPUpdateRequest.  # noqa: E501
         :type: list[str]
         """
-        if tags is None:
-            raise ValueError("Invalid value for `tags`, must not be `None`")  # noqa: E501
 
         self._tags = tags
 

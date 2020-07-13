@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
+from metal_python.version import VERSION
 
 NAME = "metal_python"
-VERSION = "v0.7.8"
 
 REQUIRES = [
     "certifi>=2017.4.17",

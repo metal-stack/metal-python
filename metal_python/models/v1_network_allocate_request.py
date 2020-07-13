@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -58,7 +58,8 @@ class V1NetworkAllocateRequest(object):
 
         if description is not None:
             self.description = description
-        self.labels = labels
+        if labels is not None:
+            self.labels = labels
         if name is not None:
             self.name = name
         if partitionid is not None:
@@ -109,8 +110,6 @@ class V1NetworkAllocateRequest(object):
         :param labels: The labels of this V1NetworkAllocateRequest.  # noqa: E501
         :type: dict(str, str)
         """
-        if labels is None:
-            raise ValueError("Invalid value for `labels`, must not be `None`")  # noqa: E501
 
         self._labels = labels
 

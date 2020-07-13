@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**changed** | **datetime** | the last changed timestamp of this entity | 
+**changed** | **datetime** | the last changed timestamp of this entity | [optional] 
 **connections** | [**list[V1SwitchConnection]**](V1SwitchConnection.md) | a connection between a switch port and a machine | 
-**created** | **datetime** | the creation time of this entity | 
+**created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
 **last_sync** | [**MetalSwitchSync**](MetalSwitchSync.md) | last successful synchronization to the switch | 

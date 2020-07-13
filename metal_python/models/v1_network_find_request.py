@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -77,18 +77,30 @@ class V1NetworkFindRequest(object):
         self._vrf = None
         self.discriminator = None
 
-        self.destinationprefixes = destinationprefixes
-        self.id = id
-        self.labels = labels
-        self.name = name
-        self.nat = nat
-        self.parentnetworkid = parentnetworkid
-        self.partitionid = partitionid
-        self.prefixes = prefixes
-        self.privatesuper = privatesuper
-        self.projectid = projectid
-        self.underlay = underlay
-        self.vrf = vrf
+        if destinationprefixes is not None:
+            self.destinationprefixes = destinationprefixes
+        if id is not None:
+            self.id = id
+        if labels is not None:
+            self.labels = labels
+        if name is not None:
+            self.name = name
+        if nat is not None:
+            self.nat = nat
+        if parentnetworkid is not None:
+            self.parentnetworkid = parentnetworkid
+        if partitionid is not None:
+            self.partitionid = partitionid
+        if prefixes is not None:
+            self.prefixes = prefixes
+        if privatesuper is not None:
+            self.privatesuper = privatesuper
+        if projectid is not None:
+            self.projectid = projectid
+        if underlay is not None:
+            self.underlay = underlay
+        if vrf is not None:
+            self.vrf = vrf
 
     @property
     def destinationprefixes(self):
@@ -108,8 +120,6 @@ class V1NetworkFindRequest(object):
         :param destinationprefixes: The destinationprefixes of this V1NetworkFindRequest.  # noqa: E501
         :type: list[str]
         """
-        if destinationprefixes is None:
-            raise ValueError("Invalid value for `destinationprefixes`, must not be `None`")  # noqa: E501
 
         self._destinationprefixes = destinationprefixes
 
@@ -131,8 +141,6 @@ class V1NetworkFindRequest(object):
         :param id: The id of this V1NetworkFindRequest.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -154,8 +162,6 @@ class V1NetworkFindRequest(object):
         :param labels: The labels of this V1NetworkFindRequest.  # noqa: E501
         :type: dict(str, str)
         """
-        if labels is None:
-            raise ValueError("Invalid value for `labels`, must not be `None`")  # noqa: E501
 
         self._labels = labels
 
@@ -177,8 +183,6 @@ class V1NetworkFindRequest(object):
         :param name: The name of this V1NetworkFindRequest.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -200,8 +204,6 @@ class V1NetworkFindRequest(object):
         :param nat: The nat of this V1NetworkFindRequest.  # noqa: E501
         :type: bool
         """
-        if nat is None:
-            raise ValueError("Invalid value for `nat`, must not be `None`")  # noqa: E501
 
         self._nat = nat
 
@@ -223,8 +225,6 @@ class V1NetworkFindRequest(object):
         :param parentnetworkid: The parentnetworkid of this V1NetworkFindRequest.  # noqa: E501
         :type: str
         """
-        if parentnetworkid is None:
-            raise ValueError("Invalid value for `parentnetworkid`, must not be `None`")  # noqa: E501
 
         self._parentnetworkid = parentnetworkid
 
@@ -246,8 +246,6 @@ class V1NetworkFindRequest(object):
         :param partitionid: The partitionid of this V1NetworkFindRequest.  # noqa: E501
         :type: str
         """
-        if partitionid is None:
-            raise ValueError("Invalid value for `partitionid`, must not be `None`")  # noqa: E501
 
         self._partitionid = partitionid
 
@@ -269,8 +267,6 @@ class V1NetworkFindRequest(object):
         :param prefixes: The prefixes of this V1NetworkFindRequest.  # noqa: E501
         :type: list[str]
         """
-        if prefixes is None:
-            raise ValueError("Invalid value for `prefixes`, must not be `None`")  # noqa: E501
 
         self._prefixes = prefixes
 
@@ -292,8 +288,6 @@ class V1NetworkFindRequest(object):
         :param privatesuper: The privatesuper of this V1NetworkFindRequest.  # noqa: E501
         :type: bool
         """
-        if privatesuper is None:
-            raise ValueError("Invalid value for `privatesuper`, must not be `None`")  # noqa: E501
 
         self._privatesuper = privatesuper
 
@@ -315,8 +309,6 @@ class V1NetworkFindRequest(object):
         :param projectid: The projectid of this V1NetworkFindRequest.  # noqa: E501
         :type: str
         """
-        if projectid is None:
-            raise ValueError("Invalid value for `projectid`, must not be `None`")  # noqa: E501
 
         self._projectid = projectid
 
@@ -338,8 +330,6 @@ class V1NetworkFindRequest(object):
         :param underlay: The underlay of this V1NetworkFindRequest.  # noqa: E501
         :type: bool
         """
-        if underlay is None:
-            raise ValueError("Invalid value for `underlay`, must not be `None`")  # noqa: E501
 
         self._underlay = underlay
 
@@ -361,8 +351,6 @@ class V1NetworkFindRequest(object):
         :param vrf: The vrf of this V1NetworkFindRequest.  # noqa: E501
         :type: int
         """
-        if vrf is None:
-            raise ValueError("Invalid value for `vrf`, must not be `None`")  # noqa: E501
 
         self._vrf = vrf
 

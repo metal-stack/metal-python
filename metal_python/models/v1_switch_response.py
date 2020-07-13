@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -74,9 +74,11 @@ class V1SwitchResponse(object):
         self._rack_id = None
         self.discriminator = None
 
-        self.changed = changed
+        if changed is not None:
+            self.changed = changed
         self.connections = connections
-        self.created = created
+        if created is not None:
+            self.created = created
         if description is not None:
             self.description = description
         self.id = id
@@ -108,8 +110,6 @@ class V1SwitchResponse(object):
         :param changed: The changed of this V1SwitchResponse.  # noqa: E501
         :type: datetime
         """
-        if changed is None:
-            raise ValueError("Invalid value for `changed`, must not be `None`")  # noqa: E501
 
         self._changed = changed
 
@@ -158,8 +158,6 @@ class V1SwitchResponse(object):
         :param created: The created of this V1SwitchResponse.  # noqa: E501
         :type: datetime
         """
-        if created is None:
-            raise ValueError("Invalid value for `created`, must not be `None`")  # noqa: E501
 
         self._created = created
 

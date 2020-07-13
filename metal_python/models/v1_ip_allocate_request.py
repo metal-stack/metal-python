@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -64,12 +64,14 @@ class V1IPAllocateRequest(object):
 
         if description is not None:
             self.description = description
-        self.machineid = machineid
+        if machineid is not None:
+            self.machineid = machineid
         if name is not None:
             self.name = name
         self.networkid = networkid
         self.projectid = projectid
-        self.tags = tags
+        if tags is not None:
+            self.tags = tags
         self.type = type
 
     @property
@@ -115,8 +117,6 @@ class V1IPAllocateRequest(object):
         :param machineid: The machineid of this V1IPAllocateRequest.  # noqa: E501
         :type: str
         """
-        if machineid is None:
-            raise ValueError("Invalid value for `machineid`, must not be `None`")  # noqa: E501
 
         self._machineid = machineid
 
@@ -213,8 +213,6 @@ class V1IPAllocateRequest(object):
         :param tags: The tags of this V1IPAllocateRequest.  # noqa: E501
         :type: list[str]
         """
-        if tags is None:
-            raise ValueError("Invalid value for `tags`, must not be `None`")  # noqa: E501
 
         self._tags = tags
 

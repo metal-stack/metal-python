@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -92,10 +92,13 @@ class V1MachineIPMIResponse(object):
         self._tags = None
         self.discriminator = None
 
-        self.allocation = allocation
+        if allocation is not None:
+            self.allocation = allocation
         self.bios = bios
-        self.changed = changed
-        self.created = created
+        if changed is not None:
+            self.changed = changed
+        if created is not None:
+            self.created = created
         if description is not None:
             self.description = description
         self.events = events
@@ -106,9 +109,12 @@ class V1MachineIPMIResponse(object):
         self.liveliness = liveliness
         if name is not None:
             self.name = name
-        self.partition = partition
-        self.rackid = rackid
-        self.size = size
+        if partition is not None:
+            self.partition = partition
+        if rackid is not None:
+            self.rackid = rackid
+        if size is not None:
+            self.size = size
         self.state = state
         self.tags = tags
 
@@ -132,8 +138,6 @@ class V1MachineIPMIResponse(object):
         :param allocation: The allocation of this V1MachineIPMIResponse.  # noqa: E501
         :type: V1MachineAllocation
         """
-        if allocation is None:
-            raise ValueError("Invalid value for `allocation`, must not be `None`")  # noqa: E501
 
         self._allocation = allocation
 
@@ -182,8 +186,6 @@ class V1MachineIPMIResponse(object):
         :param changed: The changed of this V1MachineIPMIResponse.  # noqa: E501
         :type: datetime
         """
-        if changed is None:
-            raise ValueError("Invalid value for `changed`, must not be `None`")  # noqa: E501
 
         self._changed = changed
 
@@ -207,8 +209,6 @@ class V1MachineIPMIResponse(object):
         :param created: The created of this V1MachineIPMIResponse.  # noqa: E501
         :type: datetime
         """
-        if created is None:
-            raise ValueError("Invalid value for `created`, must not be `None`")  # noqa: E501
 
         self._created = created
 
@@ -428,8 +428,6 @@ class V1MachineIPMIResponse(object):
         :param partition: The partition of this V1MachineIPMIResponse.  # noqa: E501
         :type: V1PartitionResponse
         """
-        if partition is None:
-            raise ValueError("Invalid value for `partition`, must not be `None`")  # noqa: E501
 
         self._partition = partition
 
@@ -453,8 +451,6 @@ class V1MachineIPMIResponse(object):
         :param rackid: The rackid of this V1MachineIPMIResponse.  # noqa: E501
         :type: str
         """
-        if rackid is None:
-            raise ValueError("Invalid value for `rackid`, must not be `None`")  # noqa: E501
 
         self._rackid = rackid
 
@@ -478,8 +474,6 @@ class V1MachineIPMIResponse(object):
         :param size: The size of this V1MachineIPMIResponse.  # noqa: E501
         :type: V1SizeResponse
         """
-        if size is None:
-            raise ValueError("Invalid value for `size`, must not be `None`")  # noqa: E501
 
         self._size = size
 
