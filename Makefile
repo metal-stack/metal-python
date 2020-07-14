@@ -1,9 +1,8 @@
-METAL_API_VERSION := $(or ${METAL_API_VERSION},spec-corrections)
+METAL_API_VERSION := $(or ${METAL_API_VERSION},$(shell python3 -c 'from metal_python.version import VERSION; print(VERSION)'))
 SWAGGER_VERSION := $(or ${SWAGGER_VERSION},2.4.14)
 
 .PHONY: generate-client
 generate-client:
-	echo "VERSION = '$(subst v,,$(METAL_API_VERSION))'" > metal_python/version.py
 	docker run --rm \
 	  -v ${PWD}:/workdir \
 	  -u $$(id -u):$$(id -g) \
