@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -38,6 +38,7 @@ class V1SwitchResponse(object):
         'id': 'str',
         'last_sync': 'MetalSwitchSync',
         'last_sync_error': 'MetalSwitchSync',
+        'mode': 'str',
         'name': 'str',
         'nics': 'list[V1SwitchNic]',
         'partition': 'V1PartitionResponse',
@@ -52,13 +53,14 @@ class V1SwitchResponse(object):
         'id': 'id',
         'last_sync': 'last_sync',
         'last_sync_error': 'last_sync_error',
+        'mode': 'mode',
         'name': 'name',
         'nics': 'nics',
         'partition': 'partition',
         'rack_id': 'rack_id'
     }
 
-    def __init__(self, changed=None, connections=None, created=None, description=None, id=None, last_sync=None, last_sync_error=None, name=None, nics=None, partition=None, rack_id=None):  # noqa: E501
+    def __init__(self, changed=None, connections=None, created=None, description=None, id=None, last_sync=None, last_sync_error=None, mode=None, name=None, nics=None, partition=None, rack_id=None):  # noqa: E501
         """V1SwitchResponse - a model defined in Swagger"""  # noqa: E501
 
         self._changed = None
@@ -68,22 +70,23 @@ class V1SwitchResponse(object):
         self._id = None
         self._last_sync = None
         self._last_sync_error = None
+        self._mode = None
         self._name = None
         self._nics = None
         self._partition = None
         self._rack_id = None
         self.discriminator = None
 
-        if changed is not None:
-            self.changed = changed
+        self.changed = changed
         self.connections = connections
-        if created is not None:
-            self.created = created
+        self.created = created
         if description is not None:
             self.description = description
         self.id = id
         self.last_sync = last_sync
         self.last_sync_error = last_sync_error
+        if mode is not None:
+            self.mode = mode
         if name is not None:
             self.name = name
         self.nics = nics
@@ -110,6 +113,8 @@ class V1SwitchResponse(object):
         :param changed: The changed of this V1SwitchResponse.  # noqa: E501
         :type: datetime
         """
+        if changed is None:
+            raise ValueError("Invalid value for `changed`, must not be `None`")  # noqa: E501
 
         self._changed = changed
 
@@ -158,6 +163,8 @@ class V1SwitchResponse(object):
         :param created: The created of this V1SwitchResponse.  # noqa: E501
         :type: datetime
         """
+        if created is None:
+            raise ValueError("Invalid value for `created`, must not be `None`")  # noqa: E501
 
         self._created = created
 
@@ -258,6 +265,29 @@ class V1SwitchResponse(object):
             raise ValueError("Invalid value for `last_sync_error`, must not be `None`")  # noqa: E501
 
         self._last_sync_error = last_sync_error
+
+    @property
+    def mode(self):
+        """Gets the mode of this V1SwitchResponse.  # noqa: E501
+
+        the mode the switch currently has  # noqa: E501
+
+        :return: The mode of this V1SwitchResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._mode
+
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this V1SwitchResponse.
+
+        the mode the switch currently has  # noqa: E501
+
+        :param mode: The mode of this V1SwitchResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._mode = mode
 
     @property
     def name(self):

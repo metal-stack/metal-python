@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -112,7 +112,7 @@ class SizeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/size', 'PUT',
@@ -209,7 +209,7 @@ class SizeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/size/{id}', 'DELETE',
@@ -306,7 +306,7 @@ class SizeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/size/{id}', 'GET',
@@ -403,7 +403,7 @@ class SizeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/size/from-hardware', 'POST',
@@ -492,7 +492,7 @@ class SizeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/size', 'GET',
@@ -589,7 +589,7 @@ class SizeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/size', 'POST',

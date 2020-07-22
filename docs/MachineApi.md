@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**abort_reinstall_machine**](MachineApi.md#abort_reinstall_machine) | **POST** /v1/machine/{id}/abort-reinstall | abort reinstall this machine
 [**add_provisioning_event**](MachineApi.md#add_provisioning_event) | **POST** /v1/machine/{id}/event | adds a machine provisioning event
 [**allocate_machine**](MachineApi.md#allocate_machine) | **POST** /v1/machine/allocate | allocate a machine
-[**chassis_identify_led_off**](MachineApi.md#chassis_identify_led_off) | **POST** /v1/machine/{id}/power/chassis-identify-led-off | sends a power-off to the chassis identify LED
+[**chassis_identify_led_off**](MachineApi.md#chassis_identify_led_off) | **POST** /v1/machine/{id}/power/chassis-identify-led-off/{description} | sends a power-off to the chassis identify LED
 [**chassis_identify_led_on**](MachineApi.md#chassis_identify_led_on) | **POST** /v1/machine/{id}/power/chassis-identify-led-on | sends a power-on to the chassis identify LED
+[**chassis_identify_led_on_0**](MachineApi.md#chassis_identify_led_on_0) | **POST** /v1/machine/{id}/power/chassis-identify-led-on/{description} | sends a power-on to the chassis identify LED
 [**finalize_allocation**](MachineApi.md#finalize_allocation) | **POST** /v1/machine/{id}/finalize-allocation | finalize the allocation of the machine by reconfiguring the switch, sent on successful image installation
 [**find_ipmi_machine**](MachineApi.md#find_ipmi_machine) | **GET** /v1/machine/{id}/ipmi | returns a machine including the ipmi connection data
 [**find_ipmi_machines**](MachineApi.md#find_ipmi_machines) | **POST** /v1/machine/ipmi/find | returns machines including the ipmi connection data
@@ -42,19 +43,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1MachineAbortReinstallRequest() # V1MachineAbortReinstallRequest | 
 
@@ -79,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -101,19 +91,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1MachineProvisioningEvent() # V1MachineProvisioningEvent | 
 
@@ -138,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -160,19 +139,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 body = metal_python.V1MachineAllocateRequest() # V1MachineAllocateRequest | 
 
 try:
@@ -195,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -205,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **chassis_identify_led_off**
-> V1MachineResponse chassis_identify_led_off(id, body, description=description)
+> V1MachineResponse chassis_identify_led_off(id, description, body)
 
 sends a power-off to the chassis identify LED
 
@@ -217,26 +185,15 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
+description = 'description_example' # str | reason why the chassis identify LED has been turned off
 body = metal_python.V1EmptyBody() # V1EmptyBody | 
-description = 'description_example' # str | reason why the chassis identify LED has been turned off (optional)
 
 try:
     # sends a power-off to the chassis identify LED
-    api_response = api_instance.chassis_identify_led_off(id, body, description=description)
+    api_response = api_instance.chassis_identify_led_off(id, description, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MachineApi->chassis_identify_led_off: %s\n" % e)
@@ -247,8 +204,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the machine | 
+ **description** | **str**| reason why the chassis identify LED has been turned off | 
  **body** | [**V1EmptyBody**](V1EmptyBody.md)|  | 
- **description** | **str**| reason why the chassis identify LED has been turned off | [optional] 
 
 ### Return type
 
@@ -256,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -266,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **chassis_identify_led_on**
-> V1MachineResponse chassis_identify_led_on(id, body, description=description)
+> V1MachineResponse chassis_identify_led_on(id, body)
 
 sends a power-on to the chassis identify LED
 
@@ -278,26 +235,14 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1EmptyBody() # V1EmptyBody | 
-description = 'description_example' # str | identifier of the machine (optional)
 
 try:
     # sends a power-on to the chassis identify LED
-    api_response = api_instance.chassis_identify_led_on(id, body, description=description)
+    api_response = api_instance.chassis_identify_led_on(id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MachineApi->chassis_identify_led_on: %s\n" % e)
@@ -309,7 +254,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the machine | 
  **body** | [**V1EmptyBody**](V1EmptyBody.md)|  | 
- **description** | **str**| identifier of the machine | [optional] 
 
 ### Return type
 
@@ -317,7 +261,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **chassis_identify_led_on_0**
+> V1MachineResponse chassis_identify_led_on_0(id, description, body)
+
+sends a power-on to the chassis identify LED
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = metal_python.MachineApi()
+id = 'id_example' # str | identifier of the machine
+description = 'description_example' # str | reason why the chassis identify LED has been turned on
+body = metal_python.V1EmptyBody() # V1EmptyBody | 
+
+try:
+    # sends a power-on to the chassis identify LED
+    api_response = api_instance.chassis_identify_led_on_0(id, description, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MachineApi->chassis_identify_led_on_0: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| identifier of the machine | 
+ **description** | **str**| reason why the chassis identify LED has been turned on | 
+ **body** | [**V1EmptyBody**](V1EmptyBody.md)|  | 
+
+### Return type
+
+[**V1MachineResponse**](V1MachineResponse.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -339,19 +333,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1MachineFinalizeAllocationRequest() # V1MachineFinalizeAllocationRequest | 
 
@@ -376,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -398,19 +381,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 
 try:
@@ -433,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -455,19 +427,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 body = metal_python.V1MachineFindRequest() # V1MachineFindRequest | 
 
 try:
@@ -490,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -512,19 +473,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 
 try:
@@ -547,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -569,19 +519,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 body = metal_python.V1MachineFindRequest() # V1MachineFindRequest | 
 
 try:
@@ -604,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -626,19 +565,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 
 try:
@@ -661,7 +589,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -683,19 +611,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 
 try:
@@ -718,7 +635,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -740,19 +657,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 body = metal_python.V1MachineIpmiReport() # V1MachineIpmiReport | 
 
 try:
@@ -775,7 +681,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -797,19 +703,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 
 try:
     # get all known machines
@@ -828,7 +723,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -850,19 +745,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1EmptyBody() # V1EmptyBody | 
 
@@ -887,7 +771,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -909,19 +793,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1EmptyBody() # V1EmptyBody | 
 
@@ -946,7 +819,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -968,19 +841,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1EmptyBody() # V1EmptyBody | 
 
@@ -1005,7 +867,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -1027,19 +889,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1EmptyBody() # V1EmptyBody | 
 
@@ -1064,7 +915,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -1086,19 +937,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 body = metal_python.V1MachineRegisterRequest() # V1MachineRegisterRequest | 
 
 try:
@@ -1121,7 +961,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -1143,19 +983,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1MachineReinstallRequest() # V1MachineReinstallRequest | 
 
@@ -1180,7 +1009,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -1202,19 +1031,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1ChassisIdentifyLEDState() # V1ChassisIdentifyLEDState | 
 
@@ -1239,7 +1057,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -1261,19 +1079,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 body = metal_python.V1MachineState() # V1MachineState | 
 
@@ -1298,7 +1105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -1320,19 +1127,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.MachineApi()
 id = 'id_example' # str | identifier of the machine
 
 try:
@@ -1355,7 +1151,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
