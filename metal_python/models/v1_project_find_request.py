@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -31,10 +31,10 @@ class V1ProjectFindRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'description': 'WrappersStringValue',
-        'id': 'WrappersStringValue',
-        'name': 'WrappersStringValue',
-        'tenant_id': 'WrappersStringValue'
+        'description': 'str',
+        'id': 'str',
+        'name': 'str',
+        'tenant_id': 'str'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class V1ProjectFindRequest(object):
 
 
         :return: The description of this V1ProjectFindRequest.  # noqa: E501
-        :rtype: WrappersStringValue
+        :rtype: str
         """
         return self._description
 
@@ -78,7 +78,7 @@ class V1ProjectFindRequest(object):
 
 
         :param description: The description of this V1ProjectFindRequest.  # noqa: E501
-        :type: WrappersStringValue
+        :type: str
         """
 
         self._description = description
@@ -89,7 +89,7 @@ class V1ProjectFindRequest(object):
 
 
         :return: The id of this V1ProjectFindRequest.  # noqa: E501
-        :rtype: WrappersStringValue
+        :rtype: str
         """
         return self._id
 
@@ -99,7 +99,7 @@ class V1ProjectFindRequest(object):
 
 
         :param id: The id of this V1ProjectFindRequest.  # noqa: E501
-        :type: WrappersStringValue
+        :type: str
         """
 
         self._id = id
@@ -110,7 +110,7 @@ class V1ProjectFindRequest(object):
 
 
         :return: The name of this V1ProjectFindRequest.  # noqa: E501
-        :rtype: WrappersStringValue
+        :rtype: str
         """
         return self._name
 
@@ -120,7 +120,7 @@ class V1ProjectFindRequest(object):
 
 
         :param name: The name of this V1ProjectFindRequest.  # noqa: E501
-        :type: WrappersStringValue
+        :type: str
         """
 
         self._name = name
@@ -131,7 +131,7 @@ class V1ProjectFindRequest(object):
 
 
         :return: The tenant_id of this V1ProjectFindRequest.  # noqa: E501
-        :rtype: WrappersStringValue
+        :rtype: str
         """
         return self._tenant_id
 
@@ -141,7 +141,7 @@ class V1ProjectFindRequest(object):
 
 
         :param tenant_id: The tenant_id of this V1ProjectFindRequest.  # noqa: E501
-        :type: WrappersStringValue
+        :type: str
         """
 
         self._tenant_id = tenant_id

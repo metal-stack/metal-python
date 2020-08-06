@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -33,6 +33,7 @@ class V1SwitchRegisterRequest(object):
     swagger_types = {
         'description': 'str',
         'id': 'str',
+        'mode': 'str',
         'name': 'str',
         'nics': 'list[V1SwitchNic]',
         'partition_id': 'str',
@@ -42,17 +43,19 @@ class V1SwitchRegisterRequest(object):
     attribute_map = {
         'description': 'description',
         'id': 'id',
+        'mode': 'mode',
         'name': 'name',
         'nics': 'nics',
         'partition_id': 'partition_id',
         'rack_id': 'rack_id'
     }
 
-    def __init__(self, description=None, id=None, name=None, nics=None, partition_id=None, rack_id=None):  # noqa: E501
+    def __init__(self, description=None, id=None, mode=None, name=None, nics=None, partition_id=None, rack_id=None):  # noqa: E501
         """V1SwitchRegisterRequest - a model defined in Swagger"""  # noqa: E501
 
         self._description = None
         self._id = None
+        self._mode = None
         self._name = None
         self._nics = None
         self._partition_id = None
@@ -62,6 +65,8 @@ class V1SwitchRegisterRequest(object):
         if description is not None:
             self.description = description
         self.id = id
+        if mode is not None:
+            self.mode = mode
         if name is not None:
             self.name = name
         self.nics = nics
@@ -115,6 +120,29 @@ class V1SwitchRegisterRequest(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def mode(self):
+        """Gets the mode of this V1SwitchRegisterRequest.  # noqa: E501
+
+        the mode the switch currently has  # noqa: E501
+
+        :return: The mode of this V1SwitchRegisterRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._mode
+
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this V1SwitchRegisterRequest.
+
+        the mode the switch currently has  # noqa: E501
+
+        :param mode: The mode of this V1SwitchRegisterRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._mode = mode
 
     @property
     def name(self):

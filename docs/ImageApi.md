@@ -25,19 +25,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.ImageApi()
 body = metal_python.V1ImageCreateRequest() # V1ImageCreateRequest | 
 
 try:
@@ -60,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -82,19 +71,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.ImageApi()
 id = 'id_example' # str | identifier of the image
 
 try:
@@ -117,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -139,19 +117,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.ImageApi()
 id = 'id_example' # str | identifier of the image
 
 try:
@@ -174,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -196,19 +163,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.ImageApi()
 id = 'id_example' # str | identifier of the image
 
 try:
@@ -231,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -253,19 +209,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.ImageApi()
 
 try:
     # get all images
@@ -284,7 +229,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -306,19 +251,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.ImageApi()
 body = metal_python.V1ImageUpdateRequest() # V1ImageUpdateRequest | 
 
 try:
@@ -341,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 

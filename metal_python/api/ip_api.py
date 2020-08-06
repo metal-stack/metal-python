@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -112,7 +112,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip/allocate', 'POST',
@@ -217,7 +217,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip/allocate/{ip}', 'POST',
@@ -314,7 +314,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip/find', 'POST',
@@ -411,7 +411,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip/{id}', 'GET',
@@ -508,7 +508,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip/free/{id}', 'POST',
@@ -597,7 +597,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip', 'GET',
@@ -694,7 +694,7 @@ class IpApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['HMAC', 'jwt']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
             '/v1/ip', 'POST',
