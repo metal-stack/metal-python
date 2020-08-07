@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -68,10 +68,8 @@ class V1IPResponse(object):
         self._type = None
         self.discriminator = None
 
-        if changed is not None:
-            self.changed = changed
-        if created is not None:
-            self.created = created
+        self.changed = changed
+        self.created = created
         if description is not None:
             self.description = description
         self.ipaddress = ipaddress
@@ -79,8 +77,7 @@ class V1IPResponse(object):
             self.name = name
         self.networkid = networkid
         self.projectid = projectid
-        if tags is not None:
-            self.tags = tags
+        self.tags = tags
         self.type = type
 
     @property
@@ -103,6 +100,8 @@ class V1IPResponse(object):
         :param changed: The changed of this V1IPResponse.  # noqa: E501
         :type: datetime
         """
+        if changed is None:
+            raise ValueError("Invalid value for `changed`, must not be `None`")  # noqa: E501
 
         self._changed = changed
 
@@ -126,6 +125,8 @@ class V1IPResponse(object):
         :param created: The created of this V1IPResponse.  # noqa: E501
         :type: datetime
         """
+        if created is None:
+            raise ValueError("Invalid value for `created`, must not be `None`")  # noqa: E501
 
         self._created = created
 
@@ -270,6 +271,8 @@ class V1IPResponse(object):
         :param tags: The tags of this V1IPResponse.  # noqa: E501
         :type: list[str]
         """
+        if tags is None:
+            raise ValueError("Invalid value for `tags`, must not be `None`")  # noqa: E501
 
         self._tags = tags
 
