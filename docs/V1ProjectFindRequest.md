@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | [**WrappersStringValue**](WrappersStringValue.md) |  | [optional] 
-**id** | [**WrappersStringValue**](WrappersStringValue.md) |  | [optional] 
-**name** | [**WrappersStringValue**](WrappersStringValue.md) |  | [optional] 
-**tenant_id** | [**WrappersStringValue**](WrappersStringValue.md) |  | [optional] 
+**description** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**tenant_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

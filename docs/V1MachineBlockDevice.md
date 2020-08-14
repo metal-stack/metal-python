@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | the name of this block device | 
-**partitions** | [**list[V1MachineDiskPartition]**](V1MachineDiskPartition.md) | the partitions of this disk | [optional] 
+**partitions** | [**list[V1MachineDiskPartition]**](V1MachineDiskPartition.md) | the partitions of this disk | 
 **primary** | **bool** | whether this disk has the OS installed | 
 **size** | **int** | the size of this block device | 
 

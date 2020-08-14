@@ -25,19 +25,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.PartitionApi()
 body = metal_python.V1PartitionCreateRequest() # V1PartitionCreateRequest | 
 
 try:
@@ -60,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -82,19 +71,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.PartitionApi()
 id = 'id_example' # str | identifier of the Partition
 
 try:
@@ -117,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -139,19 +117,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.PartitionApi()
 id = 'id_example' # str | identifier of the Partition
 
 try:
@@ -174,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -196,19 +163,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.PartitionApi()
 
 try:
     # get all Partitions
@@ -227,7 +183,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -249,19 +205,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.PartitionApi()
 
 try:
     # get Partition capacity
@@ -280,7 +225,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
@@ -302,19 +247,8 @@ import metal_python
 from metal_python.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
 # create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+api_instance = metal_python.PartitionApi()
 body = metal_python.V1PartitionUpdateRequest() # V1PartitionUpdateRequest | 
 
 try:
@@ -337,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+No authorization required
 
 ### HTTP request headers
 
