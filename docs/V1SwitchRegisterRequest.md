@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
+**mode** | **str** | the mode the switch currently has | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **nics** | [**list[V1SwitchNic]**](V1SwitchNic.md) | the list of network interfaces on the switch | 
 **partition_id** | **str** | the partition in which this switch is located | 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**classification** | **str** | clasification of this image | [optional] 
+**classification** | **str** | classification of this image | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **expiration_date** | **datetime** | expirationDate of this image | [optional] 
 **features** | **list[str]** | features of this image | [optional] 

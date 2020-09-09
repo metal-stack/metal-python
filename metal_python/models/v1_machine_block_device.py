@@ -3,7 +3,7 @@
 """
     metal-api
 
-    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
+    Resource for managing pure metal  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -54,8 +54,7 @@ class V1MachineBlockDevice(object):
         self.discriminator = None
 
         self.name = name
-        if partitions is not None:
-            self.partitions = partitions
+        self.partitions = partitions
         self.primary = primary
         self.size = size
 
@@ -104,6 +103,8 @@ class V1MachineBlockDevice(object):
         :param partitions: The partitions of this V1MachineBlockDevice.  # noqa: E501
         :type: list[V1MachineDiskPartition]
         """
+        if partitions is None:
+            raise ValueError("Invalid value for `partitions`, must not be `None`")  # noqa: E501
 
         self._partitions = partitions
 
