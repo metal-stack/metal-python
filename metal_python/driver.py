@@ -14,7 +14,7 @@ class Driver:
     HMAC_BYTES_ENCODING = "utf-8"
     SALT_LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    def __init__(self, url, bearer, hmac_key):
+    def __init__(self, url, bearer, hmac_key, hmac_user="Metal-Admin"):
         self.config = Configuration()
         self.config.host = url
 
@@ -43,7 +43,7 @@ class Driver:
                     auth_headers = {
                         "X-Data-Salt": salt,
                         "X-Date": t,
-                        "Authorization": "Metal-Admin " + signature,
+                        "Authorization": hmac_user + " " + signature,
                     }
                     kwargs["headers"] = {**current_headers, **auth_headers}
 
