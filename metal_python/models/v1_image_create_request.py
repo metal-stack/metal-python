@@ -79,7 +79,7 @@ class V1ImageCreateRequest(object):
     def classification(self):
         """Gets the classification of this V1ImageCreateRequest.  # noqa: E501
 
-        clasification of this image  # noqa: E501
+        classification of this image  # noqa: E501
 
         :return: The classification of this V1ImageCreateRequest.  # noqa: E501
         :rtype: str
@@ -90,7 +90,7 @@ class V1ImageCreateRequest(object):
     def classification(self, classification):
         """Sets the classification of this V1ImageCreateRequest.
 
-        clasification of this image  # noqa: E501
+        classification of this image  # noqa: E501
 
         :param classification: The classification of this V1ImageCreateRequest.  # noqa: E501
         :type: str

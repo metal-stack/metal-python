@@ -1,1 +1,1 @@
-VERSION = 'spec-corrections'
+VERSION = 'v0.9.0'

@@ -39,7 +39,8 @@ class V1ImageResponse(object):
         'features': 'list[str]',
         'id': 'str',
         'name': 'str',
-        'url': 'str'
+        'url': 'str',
+        'usedby': 'list[str]'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class V1ImageResponse(object):
         'features': 'features',
         'id': 'id',
         'name': 'name',
-        'url': 'url'
+        'url': 'url',
+        'usedby': 'usedby'
     }
 
-    def __init__(self, changed=None, classification=None, created=None, description=None, expiration_date=None, features=None, id=None, name=None, url=None):  # noqa: E501
+    def __init__(self, changed=None, classification=None, created=None, description=None, expiration_date=None, features=None, id=None, name=None, url=None, usedby=None):  # noqa: E501
         """V1ImageResponse - a model defined in Swagger"""  # noqa: E501
 
         self._changed = None
@@ -66,6 +68,7 @@ class V1ImageResponse(object):
         self._id = None
         self._name = None
         self._url = None
+        self._usedby = None
         self.discriminator = None
 
         if changed is not None:
@@ -84,6 +87,8 @@ class V1ImageResponse(object):
             self.name = name
         if url is not None:
             self.url = url
+        if usedby is not None:
+            self.usedby = usedby
 
     @property
     def changed(self):
@@ -112,7 +117,7 @@ class V1ImageResponse(object):
     def classification(self):
         """Gets the classification of this V1ImageResponse.  # noqa: E501
 
-        clasification of this image  # noqa: E501
+        classification of this image  # noqa: E501
 
         :return: The classification of this V1ImageResponse.  # noqa: E501
         :rtype: str
@@ -123,7 +128,7 @@ class V1ImageResponse(object):
     def classification(self, classification):
         """Sets the classification of this V1ImageResponse.
 
-        clasification of this image  # noqa: E501
+        classification of this image  # noqa: E501
 
         :param classification: The classification of this V1ImageResponse.  # noqa: E501
         :type: str
@@ -295,6 +300,29 @@ class V1ImageResponse(object):
         """
 
         self._url = url
+
+    @property
+    def usedby(self):
+        """Gets the usedby of this V1ImageResponse.  # noqa: E501
+
+        machines where this image is in use  # noqa: E501
+
+        :return: The usedby of this V1ImageResponse.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._usedby
+
+    @usedby.setter
+    def usedby(self, usedby):
+        """Sets the usedby of this V1ImageResponse.
+
+        machines where this image is in use  # noqa: E501
+
+        :param usedby: The usedby of this V1ImageResponse.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._usedby = usedby
 
     def to_dict(self):
         """Returns the model properties as a dict"""
