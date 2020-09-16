@@ -26,7 +26,6 @@ Method | HTTP request | Description
 [**reinstall_machine**](MachineApi.md#reinstall_machine) | **POST** /v1/machine/{id}/reinstall | reinstall this machine
 [**set_chassis_identify_led_state**](MachineApi.md#set_chassis_identify_led_state) | **POST** /v1/machine/{id}/chassis-identify-led-state | set the state of a chassis identify LED
 [**set_machine_state**](MachineApi.md#set_machine_state) | **POST** /v1/machine/{id}/state | set the state of a machine
-[**wait_for_allocation**](MachineApi.md#wait_for_allocation) | **GET** /v1/machine/{id}/wait | wait for an allocation of this machine
 
 
 # **abort_reinstall_machine**
@@ -1291,63 +1290,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the machine | 
  **body** | [**V1MachineState**](V1MachineState.md)|  | 
-
-### Return type
-
-[**V1MachineResponse**](V1MachineResponse.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **wait_for_allocation**
-> V1MachineResponse wait_for_allocation(id)
-
-wait for an allocation of this machine
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-id = 'id_example' # str | identifier of the machine
-
-try:
-    # wait for an allocation of this machine
-    api_response = api_instance.wait_for_allocation(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->wait_for_allocation: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| identifier of the machine | 
 
 ### Return type
 

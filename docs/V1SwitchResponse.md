@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **id** | **str** | the unique ID of this entity | 
 **last_sync** | [**MetalSwitchSync**](MetalSwitchSync.md) | last successful synchronization to the switch | 
 **last_sync_error** | [**MetalSwitchSync**](MetalSwitchSync.md) | last synchronization to the switch that was erroneous | 
+**mode** | **str** | the mode the switch currently has | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **nics** | [**list[V1SwitchNic]**](V1SwitchNic.md) | the list of network interfaces on the switch | 
 **partition** | [**V1PartitionResponse**](V1PartitionResponse.md) | the partition in which this switch is located | 

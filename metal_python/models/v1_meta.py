@@ -33,11 +33,11 @@ class V1Meta(object):
     swagger_types = {
         'annotations': 'dict(str, str)',
         'apiversion': 'str',
-        'created_time': 'TimestampTimestamp',
+        'created_time': 'datetime',
         'id': 'str',
         'kind': 'str',
         'labels': 'list[str]',
-        'updated_time': 'TimestampTimestamp',
+        'updated_time': 'datetime',
         'version': 'int'
     }
 
@@ -130,7 +130,7 @@ class V1Meta(object):
 
 
         :return: The created_time of this V1Meta.  # noqa: E501
-        :rtype: TimestampTimestamp
+        :rtype: datetime
         """
         return self._created_time
 
@@ -140,7 +140,7 @@ class V1Meta(object):
 
 
         :param created_time: The created_time of this V1Meta.  # noqa: E501
-        :type: TimestampTimestamp
+        :type: datetime
         """
 
         self._created_time = created_time
@@ -214,7 +214,7 @@ class V1Meta(object):
 
 
         :return: The updated_time of this V1Meta.  # noqa: E501
-        :rtype: TimestampTimestamp
+        :rtype: datetime
         """
         return self._updated_time
 
@@ -224,7 +224,7 @@ class V1Meta(object):
 
 
         :param updated_time: The updated_time of this V1Meta.  # noqa: E501
-        :type: TimestampTimestamp
+        :type: datetime
         """
 
         self._updated_time = updated_time

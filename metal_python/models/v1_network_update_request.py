@@ -33,6 +33,7 @@ class V1NetworkUpdateRequest(object):
     swagger_types = {
         'description': 'str',
         'id': 'str',
+        'labels': 'dict(str, str)',
         'name': 'str',
         'prefixes': 'list[str]'
     }
@@ -40,15 +41,17 @@ class V1NetworkUpdateRequest(object):
     attribute_map = {
         'description': 'description',
         'id': 'id',
+        'labels': 'labels',
         'name': 'name',
         'prefixes': 'prefixes'
     }
 
-    def __init__(self, description=None, id=None, name=None, prefixes=None):  # noqa: E501
+    def __init__(self, description=None, id=None, labels=None, name=None, prefixes=None):  # noqa: E501
         """V1NetworkUpdateRequest - a model defined in Swagger"""  # noqa: E501
 
         self._description = None
         self._id = None
+        self._labels = None
         self._name = None
         self._prefixes = None
         self.discriminator = None
@@ -56,6 +59,8 @@ class V1NetworkUpdateRequest(object):
         if description is not None:
             self.description = description
         self.id = id
+        if labels is not None:
+            self.labels = labels
         if name is not None:
             self.name = name
         if prefixes is not None:
@@ -108,6 +113,29 @@ class V1NetworkUpdateRequest(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def labels(self):
+        """Gets the labels of this V1NetworkUpdateRequest.  # noqa: E501
+
+        free labels that you associate with this network.  # noqa: E501
+
+        :return: The labels of this V1NetworkUpdateRequest.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        """Sets the labels of this V1NetworkUpdateRequest.
+
+        free labels that you associate with this network.  # noqa: E501
+
+        :param labels: The labels of this V1NetworkUpdateRequest.  # noqa: E501
+        :type: dict(str, str)
+        """
+
+        self._labels = labels
 
     @property
     def name(self):

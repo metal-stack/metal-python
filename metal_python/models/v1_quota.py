@@ -31,21 +31,26 @@ class V1Quota(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'quota': 'WrappersInt32Value'
+        'quota': 'int',
+        'used': 'int'
     }
 
     attribute_map = {
-        'quota': 'quota'
+        'quota': 'quota',
+        'used': 'used'
     }
 
-    def __init__(self, quota=None):  # noqa: E501
+    def __init__(self, quota=None, used=None):  # noqa: E501
         """V1Quota - a model defined in Swagger"""  # noqa: E501
 
         self._quota = None
+        self._used = None
         self.discriminator = None
 
         if quota is not None:
             self.quota = quota
+        if used is not None:
+            self.used = used
 
     @property
     def quota(self):
@@ -53,7 +58,7 @@ class V1Quota(object):
 
 
         :return: The quota of this V1Quota.  # noqa: E501
-        :rtype: WrappersInt32Value
+        :rtype: int
         """
         return self._quota
 
@@ -63,10 +68,31 @@ class V1Quota(object):
 
 
         :param quota: The quota of this V1Quota.  # noqa: E501
-        :type: WrappersInt32Value
+        :type: int
         """
 
         self._quota = quota
+
+    @property
+    def used(self):
+        """Gets the used of this V1Quota.  # noqa: E501
+
+
+        :return: The used of this V1Quota.  # noqa: E501
+        :rtype: int
+        """
+        return self._used
+
+    @used.setter
+    def used(self, used):
+        """Sets the used of this V1Quota.
+
+
+        :param used: The used of this V1Quota.  # noqa: E501
+        :type: int
+        """
+
+        self._used = used
 
     def to_dict(self):
         """Returns the model properties as a dict"""
