@@ -309,7 +309,7 @@ class FirewallApi(object):
         auth_settings = ['HMAC', 'jwt']  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1/firewall/find', 'GET',
+            '/v1/firewall/find', 'POST',
             path_params,
             query_params,
             header_params,
