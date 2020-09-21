@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**allocate_firewall**](FirewallApi.md#allocate_firewall) | **POST** /v1/firewall/allocate | allocate a firewall
 [**find_firewall**](FirewallApi.md#find_firewall) | **GET** /v1/firewall/{id} | get firewall by id
-[**find_firewalls**](FirewallApi.md#find_firewalls) | **GET** /v1/firewall/find | find firewalls by multiple criteria
+[**find_firewalls**](FirewallApi.md#find_firewalls) | **POST** /v1/firewall/find | find firewalls by multiple criteria
 [**list_firewalls**](FirewallApi.md#list_firewalls) | **GET** /v1/firewall | get all known firewalls
 
 
