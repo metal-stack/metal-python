@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from metal_python.version.version import VERSION
+from version import VERSION
 
 NAME = "metal_python"
 

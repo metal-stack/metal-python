@@ -1,4 +1,4 @@
-METAL_API_VERSION := $(or ${METAL_API_VERSION},$(shell python3 -c 'from metal_python.version.version import VERSION; print(VERSION)'))
+METAL_API_VERSION := $(or ${METAL_API_VERSION},$(shell python3 -c 'from version import VERSION; print(VERSION)'))
 SWAGGER_VERSION := $(or ${SWAGGER_VERSION},2.4.14)
 
 .PHONY: generate-client
