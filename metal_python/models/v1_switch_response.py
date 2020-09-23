@@ -36,8 +36,8 @@ class V1SwitchResponse(object):
         'created': 'datetime',
         'description': 'str',
         'id': 'str',
-        'last_sync': 'MetalSwitchSync',
-        'last_sync_error': 'MetalSwitchSync',
+        'last_sync': 'V1SwitchSync',
+        'last_sync_error': 'V1SwitchSync',
         'mode': 'str',
         'name': 'str',
         'nics': 'list[V1SwitchNic]',
@@ -85,8 +85,10 @@ class V1SwitchResponse(object):
         if description is not None:
             self.description = description
         self.id = id
-        self.last_sync = last_sync
-        self.last_sync_error = last_sync_error
+        if last_sync is not None:
+            self.last_sync = last_sync
+        if last_sync_error is not None:
+            self.last_sync_error = last_sync_error
         if mode is not None:
             self.mode = mode
         if name is not None:
@@ -221,7 +223,7 @@ class V1SwitchResponse(object):
         last successful synchronization to the switch  # noqa: E501
 
         :return: The last_sync of this V1SwitchResponse.  # noqa: E501
-        :rtype: MetalSwitchSync
+        :rtype: V1SwitchSync
         """
         return self._last_sync
 
@@ -232,10 +234,8 @@ class V1SwitchResponse(object):
         last successful synchronization to the switch  # noqa: E501
 
         :param last_sync: The last_sync of this V1SwitchResponse.  # noqa: E501
-        :type: MetalSwitchSync
+        :type: V1SwitchSync
         """
-        if last_sync is None:
-            raise ValueError("Invalid value for `last_sync`, must not be `None`")  # noqa: E501
 
         self._last_sync = last_sync
 
@@ -246,7 +246,7 @@ class V1SwitchResponse(object):
         last synchronization to the switch that was erroneous  # noqa: E501
 
         :return: The last_sync_error of this V1SwitchResponse.  # noqa: E501
-        :rtype: MetalSwitchSync
+        :rtype: V1SwitchSync
         """
         return self._last_sync_error
 
@@ -257,10 +257,8 @@ class V1SwitchResponse(object):
         last synchronization to the switch that was erroneous  # noqa: E501
 
         :param last_sync_error: The last_sync_error of this V1SwitchResponse.  # noqa: E501
-        :type: MetalSwitchSync
+        :type: V1SwitchSync
         """
-        if last_sync_error is None:
-            raise ValueError("Invalid value for `last_sync_error`, must not be `None`")  # noqa: E501
 
         self._last_sync_error = last_sync_error
 

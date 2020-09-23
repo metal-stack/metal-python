@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
-**last_sync** | [**MetalSwitchSync**](MetalSwitchSync.md) | last successful synchronization to the switch | 
-**last_sync_error** | [**MetalSwitchSync**](MetalSwitchSync.md) | last synchronization to the switch that was erroneous | 
+**last_sync** | [**V1SwitchSync**](V1SwitchSync.md) | last successful synchronization to the switch | [optional] 
+**last_sync_error** | [**V1SwitchSync**](V1SwitchSync.md) | last synchronization to the switch that was erroneous | [optional] 
 **mode** | **str** | the mode the switch currently has | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **nics** | [**list[V1SwitchNic]**](V1SwitchNic.md) | the list of network interfaces on the switch | 
