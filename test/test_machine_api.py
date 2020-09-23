@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -59,13 +59,6 @@ class TestMachineApi(unittest.TestCase):
 
     def test_chassis_identify_led_on(self):
         """Test case for chassis_identify_led_on
-
-        sends a power-on to the chassis identify LED  # noqa: E501
-        """
-        pass
-
-    def test_chassis_identify_led_on_0(self):
-        """Test case for chassis_identify_led_on_0
 
         sends a power-on to the chassis identify LED  # noqa: E501
         """
@@ -187,13 +180,6 @@ class TestMachineApi(unittest.TestCase):
         """Test case for set_machine_state
 
         set the state of a machine  # noqa: E501
-        """
-        pass
-
-    def test_wait_for_allocation(self):
-        """Test case for wait_for_allocation
-
-        wait for an allocation of this machine  # noqa: E501
         """
         pass
 

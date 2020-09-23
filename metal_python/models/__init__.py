@@ -4,7 +4,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -16,10 +16,8 @@ from __future__ import absolute_import
 
 # import models into model package
 from metal_python.models.httperrors_http_error_response import HttperrorsHTTPErrorResponse
-from metal_python.models.metal_switch_sync import MetalSwitchSync
 from metal_python.models.rest_status import RestStatus
 from metal_python.models.rest_version import RestVersion
-from metal_python.models.timestamp_timestamp import TimestampTimestamp
 from metal_python.models.v1_bgp_filter import V1BGPFilter
 from metal_python.models.v1_boot_info import V1BootInfo
 from metal_python.models.v1_chassis_identify_led_state import V1ChassisIdentifyLEDState
@@ -71,8 +69,10 @@ from metal_python.models.v1_partition_capacity import V1PartitionCapacity
 from metal_python.models.v1_partition_create_request import V1PartitionCreateRequest
 from metal_python.models.v1_partition_response import V1PartitionResponse
 from metal_python.models.v1_partition_update_request import V1PartitionUpdateRequest
+from metal_python.models.v1_project_create_request import V1ProjectCreateRequest
 from metal_python.models.v1_project_find_request import V1ProjectFindRequest
 from metal_python.models.v1_project_response import V1ProjectResponse
+from metal_python.models.v1_project_update_request import V1ProjectUpdateRequest
 from metal_python.models.v1_quota import V1Quota
 from metal_python.models.v1_quota_set import V1QuotaSet
 from metal_python.models.v1_server_capacity import V1ServerCapacity
@@ -87,5 +87,5 @@ from metal_python.models.v1_switch_nic import V1SwitchNic
 from metal_python.models.v1_switch_notify_request import V1SwitchNotifyRequest
 from metal_python.models.v1_switch_register_request import V1SwitchRegisterRequest
 from metal_python.models.v1_switch_response import V1SwitchResponse
-from metal_python.models.wrappers_int32_value import WrappersInt32Value
-from metal_python.models.wrappers_string_value import WrappersStringValue
+from metal_python.models.v1_switch_sync import V1SwitchSync
+from metal_python.models.v1_switch_update_request import V1SwitchUpdateRequest
