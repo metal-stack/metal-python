@@ -16,12 +16,11 @@ jobs:
         python-version: 3.8
     - name: Generate
       run: |
-        pip install certifi python-dateutil six urllib3 wrapt
         make generate-client
     - name: Push
       run: |
         git config --global user.name "auto-build"
         git config --global user.email "info@metal-stack.io"
         git add .
-        git commit -m "Bump to version $(python3 -c 'from metal_python.version import VERSION; print(VERSION)')"
+        git commit -m "Bump to version $(python3 -c 'from metal_python.version.version import VERSION; print(VERSION)')"
         git push
