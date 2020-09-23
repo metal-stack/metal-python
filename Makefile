@@ -3,7 +3,7 @@ SWAGGER_VERSION := $(or ${SWAGGER_VERSION},2.4.14)
 
 .PHONY: generate-client
 generate-client:
-	rm -rf docs metal_python/api metal_python/models
+	rm -rf docs metal_python/api metal_python/models test
 	docker run --rm \
 	  -v ${PWD}:/workdir \
 	  -u $$(id -u):$$(id -g) \
@@ -19,7 +19,7 @@ generate-client:
 METAL_API_SPEC_LOCAL_PATH := "../metal-api/spec/metal-api.json"
 .PHONY: generate-client-local
 generate-client-local:
-	rm -rf docs metal_python/api metal_python/models
+	rm -rf docs metal_python/api metal_python/models test
 	cp $(METAL_API_SPEC_LOCAL_PATH) .
 	docker run --rm \
 	  -v ${PWD}:/workdir \
