@@ -19,8 +19,10 @@ jobs:
         make generate-client
     - name: Push
       run: |
-        git config --global user.name "auto-build"
-        git config --global user.email "info@metal-stack.io"
-        git add .
-        git commit -m "Bump to version $(python3 -c 'from version import VERSION; print(VERSION)')"
-        git push
+        if ! git diff --exit-code; then
+          git config --global user.name "auto-build"
+          git config --global user.email "info@metal-stack.io"
+          git add .
+          git commit -m "Bump to version $(python3 -c 'from version import VERSION; print(VERSION)')"
+          git push
+        fi
