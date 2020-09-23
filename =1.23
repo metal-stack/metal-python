@@ -1,0 +1,15 @@
+Collecting certifi
+  Downloading certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+Collecting python-dateutil
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting six
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting urllib3
+  Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+Collecting wrapt
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Using legacy 'setup.py install' for wrapt, since package 'wheel' is not installed.
+Installing collected packages: certifi, six, python-dateutil, urllib3, wrapt
+    Running setup.py install for wrapt: started
+    Running setup.py install for wrapt: finished with status 'done'
+Successfully installed certifi-2020.6.20 python-dateutil-2.8.1 six-1.15.0 urllib3-1.25.10 wrapt-1.12.1
