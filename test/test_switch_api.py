@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -61,6 +61,13 @@ class TestSwitchApi(unittest.TestCase):
         """Test case for register_switch
 
         register a switch  # noqa: E501
+        """
+        pass
+
+    def test_update_switch(self):
+        """Test case for update_switch
+
+        updates a switch. if the switch was changed since this one was read, a conflict is returned  # noqa: E501
         """
         pass
 

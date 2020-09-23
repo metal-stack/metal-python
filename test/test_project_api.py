@@ -3,7 +3,7 @@
 """
     metal-api
 
-    Resource for managing pure metal  # noqa: E501
+    API to manage and control plane resources like machines, switches, operating system images, machine sizes, networks, IP addresses and more  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -29,6 +29,20 @@ class TestProjectApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_project(self):
+        """Test case for create_project
+
+        create a project. if the given ID already exists a conflict is returned  # noqa: E501
+        """
+        pass
+
+    def test_delete_project(self):
+        """Test case for delete_project
+
+        deletes a project and returns the deleted entity  # noqa: E501
+        """
+        pass
+
     def test_find_project(self):
         """Test case for find_project
 
@@ -47,6 +61,13 @@ class TestProjectApi(unittest.TestCase):
         """Test case for list_projects
 
         get all projects  # noqa: E501
+        """
+        pass
+
+    def test_update_project(self):
+        """Test case for update_project
+
+        update a project. optimistic lock error can occur.  # noqa: E501
         """
         pass
 
