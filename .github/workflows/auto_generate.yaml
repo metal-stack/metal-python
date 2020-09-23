@@ -16,7 +16,7 @@ jobs:
         python-version: 3.8
     - name: Generate
       run: |
-        pip install certifi>=2017.4.17 python-dateutil>=2.1 six>=1.10 urllib3>=1.23 wrapt
+        pip install certifi python-dateutil six urllib3 wrapt
         make generate-client
     - name: Push
       run: |
