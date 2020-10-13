@@ -5,8 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allocated** | **int** | allocated servers with this size | 
 **faulty** | **int** | servers with issues with this size | 
+**faultymachines** | **list[str]** | servers with issues with this size | 
 **free** | **int** | free servers with this size | 
 **other** | **int** | servers neither free, allocated or faulty with this size | 
+**othermachines** | **list[str]** | servers neither free, allocated or faulty with this size | 
 **size** | **str** | the size of the server | 
 **total** | **int** | total amount of servers with this size | 
 
