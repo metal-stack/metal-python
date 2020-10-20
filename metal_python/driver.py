@@ -1,6 +1,7 @@
 import hmac
 import random
 import wrapt
+import os
 
 from abc import ABC
 from hashlib import sha256
@@ -17,6 +18,9 @@ class Driver:
     def __init__(self, url, bearer, hmac_key, hmac_user="Metal-Admin"):
         self.config = Configuration()
         self.config.host = url
+
+        if os.environ.get("HTTPS_PROXY"):
+            self.config.proxy = os.environ.get("HTTPS_PROXY")
 
         if bearer:
             self.config.api_key["Authorization"] = bearer
