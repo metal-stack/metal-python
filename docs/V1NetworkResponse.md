@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **prefixes** | **list[str]** | the prefixes of this network | 
 **privatesuper** | **bool** | if set to true, this network will serve as a partition&#39;s super network for the internal machine networks,there can only be one privatesuper network per partition | 
 **projectid** | **str** | the project id this network belongs to, can be empty if globally available | [optional] 
+**shared** | **bool** | marks a network as shareable. | [optional] 
 **underlay** | **bool** | if set to true, this network can be used for underlay communication | 
 **usage** | [**V1NetworkUsage**](V1NetworkUsage.md) | usage of ips and prefixes in this network | 
 **vrf** | **int** | the vrf this network is associated with | [optional] 

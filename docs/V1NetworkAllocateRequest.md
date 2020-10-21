@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** | a readable name for this entity | [optional] 
 **partitionid** | **str** | the partition this network belongs to | [optional] 
 **projectid** | **str** | the project id this network belongs to, can be empty if globally available | [optional] 
+**shared** | **bool** | marks a network as shareable. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

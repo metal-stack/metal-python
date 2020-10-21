@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **labels** | **dict(str, str)** | free labels that you associate with this network. | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **prefixes** | **list[str]** | the prefixes of this network | [optional] 
+**shared** | **bool** | marks a network as shareable. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
