@@ -25,7 +25,6 @@ Name | Type | Description | Notes
 **ipmi_interface** | **str** |  | [optional] 
 **ipmi_mac_address** | **str** |  | [optional] 
 **ipmi_user** | **str** |  | [optional] 
-**liveliness** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **network_asns** | **list[int]** |  | [optional] 
 **network_destination_prefixes** | **list[str]** |  | [optional] 
