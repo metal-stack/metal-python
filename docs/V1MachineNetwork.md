@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ips** | **list[str]** | the ip addresses of the allocated machine in this vrf | 
 **nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | 
 **networkid** | **str** | the networkID of the allocated machine in this vrf | 
-**networktype** | **str** | the network type | 
+**networktype** | **str** | the network type, types can be looked up in the network package of metal-lib | 
 **prefixes** | **list[str]** | the prefixes of this network | 
 **private** | **bool** | indicates whether this network is the private network of this machine | 
 **underlay** | **bool** | if set to true, this network can be used for underlay communication | 
