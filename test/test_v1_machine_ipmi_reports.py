@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import metal_python
-from metal_python.models.v1_empty_body import V1EmptyBody  # noqa: E501
+from metal_python.models.v1_machine_ipmi_reports import V1MachineIpmiReports  # noqa: E501
 from metal_python.rest import ApiException
 
 
-class TestV1EmptyBody(unittest.TestCase):
-    """V1EmptyBody unit test stubs"""
+class TestV1MachineIpmiReports(unittest.TestCase):
+    """V1MachineIpmiReports unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestV1EmptyBody(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1EmptyBody(self):
-        """Test V1EmptyBody"""
+    def testV1MachineIpmiReports(self):
+        """Test V1MachineIpmiReports"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = metal_python.models.v1_empty_body.V1EmptyBody()  # noqa: E501
+        # model = metal_python.models.v1_machine_ipmi_reports.V1MachineIpmiReports()  # noqa: E501
         pass
 
 
