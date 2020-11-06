@@ -3,9 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**frus** | [**dict(str, V1MachineFru)**](V1MachineFru.md) | the FRU information by machine UID | 
-**leases** | **dict(str, str)** | the active leases to be reported by a management server | 
-**partitionid** | **str** | the partition id for the ipmi report | 
+**bios_version** | **str** |  | 
+**bmc_ip** | **str** |  | 
+**bmc_version** | **str** |  | 
+**fru** | [**V1MachineFru**](V1MachineFru.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
