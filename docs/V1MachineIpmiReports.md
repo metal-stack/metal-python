@@ -1,10 +1,10 @@
-# V1MachineIpmiReportResponse
+# V1MachineIpmiReports
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created** | **list[str]** | the machine uuids that triggered a creation of a machine entity | 
-**updated** | **list[str]** | the machine uuids that triggered an update of ipmi data | 
+**partitionid** | **str** | the partition id for the ipmi report | [optional] 
+**reports** | [**dict(str, V1MachineIpmiReport)**](V1MachineIpmiReport.md) | uuid to machinereport | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

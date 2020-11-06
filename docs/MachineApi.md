@@ -752,7 +752,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-body = metal_python.V1MachineIpmiReport() # V1MachineIpmiReport | 
+body = metal_python.V1MachineIpmiReports() # V1MachineIpmiReports | 
 
 try:
     # reports IPMI ip addresses leased by a management server for machines
@@ -766,7 +766,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1MachineIpmiReport**](V1MachineIpmiReport.md)|  | 
+ **body** | [**V1MachineIpmiReports**](V1MachineIpmiReports.md)|  | 
 
 ### Return type
 
