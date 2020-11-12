@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **labels** | **dict(str, str)** | free labels that you associate with this network. | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | 
-**parentnetworkid** | **str** | the id of the parent network | 
+**parentnetworkid** | **str** | the id of the parent network | [optional] 
 **partitionid** | **str** | the partition this network belongs to | [optional] 
 **prefixes** | **list[str]** | the prefixes of this network | 
 **privatesuper** | **bool** | if set to true, this network will serve as a partition&#39;s super network for the internal machine networks,there can only be one privatesuper network per partition | 
