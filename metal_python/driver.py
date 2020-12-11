@@ -3,7 +3,6 @@ import random
 import wrapt
 import os
 
-from abc import ABC
 from hashlib import sha256
 from datetime import datetime
 
@@ -34,7 +33,7 @@ class Driver:
             # dynamically before a request (it only allows refreshing the auth token, but for calculating the token
             # we also need the request method, which is not passed into the refresh function callback)
             # therefore, we wrap the client and intercept the request method and add headers this way
-            class RequestWrapper(wrapt.ObjectProxy, ABC):
+            class RequestWrapper(wrapt.ObjectProxy):
                 def __call__(self, method, u, **kwargs):
                     t = datetime.utcnow().isoformat().split(".")[0] + "Z"
                     salt = Driver.random_string()
