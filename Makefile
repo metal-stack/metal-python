@@ -4,12 +4,12 @@ SWAGGER_VERSION := $(or ${SWAGGER_VERSION},2.4.14)
 .PHONY: generate-client
 generate-client:
 	curl -LO https://raw.githubusercontent.com/metal-stack/metal-api/$(METAL_API_VERSION)/spec/metal-api.json
-	yq w -ij metal-api.json 'info.version' "${METAL_API_VERSION}"
-	yq r metal-api.json 'info.version'
 	$(MAKE) generate-client-local
 
 .PHONY: generate-client-local
 generate-client-local:
+	yq w -ij metal-api.json 'info.version' "${METAL_API_VERSION}"
+	yq r metal-api.json 'info.version'
 	rm -rf docs metal_python/api metal_python/models test
 	docker run --rm \
 	  -v ${PWD}:/workdir \
