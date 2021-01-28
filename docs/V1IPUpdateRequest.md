@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allocationuuid** | **str** | a unique identifier for this ip address allocation, can be used to distinguish between ip address allocation over time. | 
 **description** | **str** | a description for this entity | [optional] 
 **ipaddress** | **str** | the address (ipv4 or ipv6) of this ip | 
 **name** | **str** | a readable name for this entity | [optional] 
