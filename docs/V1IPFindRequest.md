@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ipaddress** | **str** | the address (ipv4 or ipv6) of this ip | [optional] 
 **machineid** | **str** | the machine an ip address is associated to | [optional] 
+**name** | **str** | the name of the ip address | [optional] 
 **networkid** | **str** | the network this ip allocate request address belongs to | [optional] 
 **networkprefix** | **str** | the prefix of the network this ip address belongs to | [optional] 
 **projectid** | **str** | the project this ip address belongs to, empty if not strong coupled | [optional] 
