@@ -4,8 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | a description for this entity | [optional] 
+**destinationprefixes** | **list[str]** | the destination prefixes of this network | [optional] 
 **labels** | **dict(str, str)** | free labels that you associate with this network. | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
+**nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | [optional] 
 **partitionid** | **str** | the partition this network belongs to | [optional] 
 **projectid** | **str** | the project id this network belongs to, can be empty if globally available | [optional] 
 **shared** | **bool** | marks a network as shareable. | [optional] 
