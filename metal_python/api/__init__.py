@@ -14,4 +14,5 @@ from metal_python.api.network_api import NetworkApi
 from metal_python.api.project_api import ProjectApi
 from metal_python.api.size_api import SizeApi
 from metal_python.api.switch_api import SwitchApi
+from metal_python.api.tenant_api import TenantApi
 from metal_python.api.version_api import VersionApi
