@@ -8,8 +8,8 @@ generate-client:
 
 .PHONY: generate-client-local
 generate-client-local:
-	yq w -ij metal-api.json 'info.version' "${METAL_API_VERSION}"
-	yq r metal-api.json 'info.version'
+	yq e -ij ".info.version=\"${METAL_API_VERSION}\"" metal-api.json
+	yq e '.info.version' metal-api.json
 	rm -rf docs metal_python/api metal_python/models test
 	docker run --rm \
 	  -v ${PWD}:/workdir \
