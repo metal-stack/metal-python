@@ -17,7 +17,7 @@ jobs:
     - name: Generate
       run: |
         if ! which yq; then
-          sudo curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/3.3.2/yq_linux_amd64
+          sudo curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/4.9.3/yq_linux_amd64
           sudo chmod +x /usr/local/bin/yq
         fi
         make generate-client
