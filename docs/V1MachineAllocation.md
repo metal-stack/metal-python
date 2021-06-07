@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **boot_info** | [**V1BootInfo**](V1BootInfo.md) | information required for booting the machine from HD | [optional] 
-**console_password** | **str** | the console password which was generated while provisioning | [optional] 
 **created** | **datetime** | the time when the machine was created | 
 **description** | **str** | a description for this machine | [optional] 
 **hostname** | **str** | the hostname which will be used when creating the machine | 
