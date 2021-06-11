@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | a description for this entity | [optional] 
+**filesystemlayoutid** | **str** | the filesystemlayout id to assing to this machine | [optional] 
 **hostname** | **str** | the hostname for the allocated machine (defaults to metal) | [optional] 
 **imageid** | **str** | the image id to assign this machine to | 
 **ips** | **list[str]** | the ips to attach to this machine additionally | [optional] 
