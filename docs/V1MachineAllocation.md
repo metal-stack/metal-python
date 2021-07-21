@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **boot_info** | [**V1BootInfo**](V1BootInfo.md) | information required for booting the machine from HD | [optional] 
 **created** | **datetime** | the time when the machine was created | 
+**creator** | **str** | email of machine creator | 
 **description** | **str** | a description for this machine | [optional] 
 **filesystemlayout** | [**V1FilesystemLayoutResponse**](V1FilesystemLayoutResponse.md) | filesystemlayout to create on this machine | [optional] 
 **hostname** | **str** | the hostname which will be used when creating the machine | 
