@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **allocation_image_id** | **str** |  | [optional] 
 **allocation_name** | **str** |  | [optional] 
 **allocation_project** | **str** |  | [optional] 
+**allocation_role** | **str** |  | [optional] 
 **allocation_succeeded** | **bool** |  | [optional] 
 **disk_names** | **list[str]** |  | [optional] 
 **disk_sizes** | **list[int]** |  | [optional] 
