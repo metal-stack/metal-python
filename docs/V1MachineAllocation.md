@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **networks** | [**list[V1MachineNetwork]**](V1MachineNetwork.md) | the networks of this machine | 
 **project** | **str** | the project id that this machine is assigned to | 
 **reinstall** | **bool** | indicates whether to reinstall the machine | 
+**role** | **str** | the role of the machine | 
 **ssh_pub_keys** | **list[str]** | the public ssh keys to access the machine with | 
 **succeeded** | **bool** | if the allocation of the machine was successful, this is set to true | 
 **user_data** | **str** | userdata to execute post installation tasks | [optional] 
