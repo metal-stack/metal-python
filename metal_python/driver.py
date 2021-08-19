@@ -18,6 +18,9 @@ class Driver:
         self.config = Configuration()
         self.config.host = url
 
+        if os.environ.get("DEBUG", "0") == "1":
+            self.config.debug = True
+
         if os.environ.get("HTTPS_PROXY"):
             self.config.proxy = os.environ.get("HTTPS_PROXY")
 
