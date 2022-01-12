@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from metal_python.driver import Driver
 from metal_python.api.partition_api import PartitionApi
 
