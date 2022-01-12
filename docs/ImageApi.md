@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_images**
-> list[V1ImageResponse] list_images()
+> list[V1ImageResponse] list_images(show_usage=show_usage)
 
 get all images
 
@@ -267,17 +267,21 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
+show_usage = false # object | include image usage into response (optional) (default to false)
 
 try:
     # get all images
-    api_response = api_instance.list_images()
+    api_response = api_instance.list_images(show_usage=show_usage)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ImageApi->list_images: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **show_usage** | [**object**](.md)| include image usage into response | [optional] [default to false]
 
 ### Return type
 
