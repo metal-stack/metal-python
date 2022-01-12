@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **health**
-> RestStatus health()
+> RestHealthResponse health(service=service)
 
 perform a healthcheck
 
@@ -33,21 +33,25 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.HealthApi(metal_python.ApiClient(configuration))
+service = 'service_example' # str | return health for this specific service only (optional)
 
 try:
     # perform a healthcheck
-    api_response = api_instance.health()
+    api_response = api_instance.health(service=service)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling HealthApi->health: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **service** | **str**| return health for this specific service only | [optional] 
 
 ### Return type
 
-[**RestStatus**](RestStatus.md)
+[**RestHealthResponse**](RestHealthResponse.md)
 
 ### Authorization
 
