@@ -14,6 +14,7 @@ from metal_python.api.machine_api import MachineApi
 from metal_python.api.network_api import NetworkApi
 from metal_python.api.project_api import ProjectApi
 from metal_python.api.size_api import SizeApi
+from metal_python.api.sizeimageconstraint_api import SizeimageconstraintApi
 from metal_python.api.switch_api import SwitchApi
 from metal_python.api.tenant_api import TenantApi
 from metal_python.api.user_api import UserApi
