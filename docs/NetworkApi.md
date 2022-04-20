@@ -9,7 +9,8 @@ Method | HTTP request | Description
 [**delete_network**](NetworkApi.md#delete_network) | **DELETE** /v1/network/{id} | deletes a network and returns the deleted entity
 [**find_network**](NetworkApi.md#find_network) | **GET** /v1/network/{id} | get network by id
 [**find_networks**](NetworkApi.md#find_networks) | **POST** /v1/network/find | get all networks that match given properties
-[**free_network**](NetworkApi.md#free_network) | **POST** /v1/network/free/{id} | free a network
+[**free_network**](NetworkApi.md#free_network) | **DELETE** /v1/network/free/{id} | free a network
+[**free_network_deprecated**](NetworkApi.md#free_network_deprecated) | **POST** /v1/network/free/{id} | free a network
 [**list_networks**](NetworkApi.md#list_networks) | **GET** /v1/network | get all networks
 [**update_network**](NetworkApi.md#update_network) | **POST** /v1/network | updates a network. if the network was changed since this one was read, a conflict is returned
 
@@ -352,6 +353,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **free_network_deprecated**
+> V1NetworkResponse free_network_deprecated(id)
+
+free a network
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.NetworkApi(metal_python.ApiClient(configuration))
+id = 'id_example' # str | identifier of the network
+
+try:
+    # free a network
+    api_response = api_instance.free_network_deprecated(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling NetworkApi->free_network_deprecated: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| identifier of the network | 
+
+### Return type
+
+[**V1NetworkResponse**](V1NetworkResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: */*, application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

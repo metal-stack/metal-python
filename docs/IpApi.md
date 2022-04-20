@@ -8,7 +8,8 @@ Method | HTTP request | Description
 [**allocate_specific_ip**](IpApi.md#allocate_specific_ip) | **POST** /v1/ip/allocate/{ip} | allocate a specific ip in the given network.
 [**find_i_ps**](IpApi.md#find_i_ps) | **POST** /v1/ip/find | get all ips that match given properties
 [**find_ip**](IpApi.md#find_ip) | **GET** /v1/ip/{id} | get ip by id
-[**free_ip**](IpApi.md#free_ip) | **POST** /v1/ip/free/{id} | frees an ip
+[**free_ip**](IpApi.md#free_ip) | **DELETE** /v1/ip/free/{id} | frees an ip
+[**free_ip_deprecated**](IpApi.md#free_ip_deprecated) | **POST** /v1/ip/free/{id} | frees an ip
 [**list_i_ps**](IpApi.md#list_i_ps) | **GET** /v1/ip | get all ips
 [**update_ip**](IpApi.md#update_ip) | **POST** /v1/ip | updates an ip. if the ip was changed since this one was read, a conflict is returned
 
@@ -296,6 +297,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **free_ip_deprecated**
+> V1IPResponse free_ip_deprecated(id)
+
+frees an ip
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.IpApi(metal_python.ApiClient(configuration))
+id = 'id_example' # str | identifier of the ip
+
+try:
+    # frees an ip
+    api_response = api_instance.free_ip_deprecated(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IpApi->free_ip_deprecated: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| identifier of the ip | 
+
+### Return type
+
+[**V1IPResponse**](V1IPResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: */*, application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
