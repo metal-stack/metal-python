@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allocationuuid** | **str** | a unique identifier for this ip address allocation, can be used to distinguish between ip address allocation over time. | [optional] 
 **ipaddress** | **str** | the address (ipv4 or ipv6) of this ip | [optional] 
 **machineid** | **str** | the machine an ip address is associated to | [optional] 
 **name** | **str** | the name of the ip address | [optional] 
