@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**abort_reinstall_machine**](MachineApi.md#abort_reinstall_machine) | **POST** /v1/machine/{id}/abort-reinstall | abort reinstall this machine
 [**add_provisioning_event**](MachineApi.md#add_provisioning_event) | **POST** /v1/machine/{id}/event | adds a machine provisioning event
+[**add_provisioning_events**](MachineApi.md#add_provisioning_events) | **POST** /v1/machine/event | adds machine provisioning events
 [**allocate_machine**](MachineApi.md#allocate_machine) | **POST** /v1/machine/allocate | allocate a machine
 [**chassis_identify_led_off**](MachineApi.md#chassis_identify_led_off) | **POST** /v1/machine/{id}/power/chassis-identify-led-off | sends a power-off to the chassis identify LED
 [**chassis_identify_led_on**](MachineApi.md#chassis_identify_led_on) | **POST** /v1/machine/{id}/power/chassis-identify-led-on | sends a power-on to the chassis identify LED
@@ -140,6 +141,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1MachineRecentProvisioningEvents**](V1MachineRecentProvisioningEvents.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_provisioning_events**
+> V1MachineRecentProvisioningEventsResponse add_provisioning_events(body)
+
+adds machine provisioning events
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+body = metal_python.V1MachineProvisioningEvents() # V1MachineProvisioningEvents | 
+
+try:
+    # adds machine provisioning events
+    api_response = api_instance.add_provisioning_events(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MachineApi->add_provisioning_events: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1MachineProvisioningEvents**](V1MachineProvisioningEvents.md)|  | 
+
+### Return type
+
+[**V1MachineRecentProvisioningEventsResponse**](V1MachineRecentProvisioningEventsResponse.md)
 
 ### Authorization
 
