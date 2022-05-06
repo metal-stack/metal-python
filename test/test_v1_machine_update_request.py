@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import metal_python
-from metal_python.models.v1_network_create_request import V1NetworkCreateRequest  # noqa: E501
+from metal_python.models.v1_machine_update_request import V1MachineUpdateRequest  # noqa: E501
 from metal_python.rest import ApiException
 
 
-class TestV1NetworkCreateRequest(unittest.TestCase):
-    """V1NetworkCreateRequest unit test stubs"""
+class TestV1MachineUpdateRequest(unittest.TestCase):
+    """V1MachineUpdateRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestV1NetworkCreateRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1NetworkCreateRequest(self):
-        """Test V1NetworkCreateRequest"""
+    def testV1MachineUpdateRequest(self):
+        """Test V1MachineUpdateRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = metal_python.models.v1_network_create_request.V1NetworkCreateRequest()  # noqa: E501
+        # model = metal_python.models.v1_machine_update_request.V1MachineUpdateRequest()  # noqa: E501
         pass
 
 
