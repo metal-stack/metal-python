@@ -33,6 +33,7 @@ Method | HTTP request | Description
 [**set_chassis_identify_led_state**](MachineApi.md#set_chassis_identify_led_state) | **POST** /v1/machine/{id}/chassis-identify-led-state | set the state of a chassis identify LED
 [**set_machine_state**](MachineApi.md#set_machine_state) | **POST** /v1/machine/{id}/state | set the state of a machine
 [**update_firmware**](MachineApi.md#update_firmware) | **POST** /v1/machine/update-firmware/{id} | sends a firmware command to the machine
+[**update_machine**](MachineApi.md#update_machine) | **POST** /v1/machine | updates a machine. if the machine was changed since this one was read, a conflict is returned
 
 
 # **abort_reinstall_machine**
@@ -1704,6 +1705,63 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the machine | 
  **body** | [**V1MachineUpdateFirmwareRequest**](V1MachineUpdateFirmwareRequest.md)|  | 
+
+### Return type
+
+[**V1MachineResponse**](V1MachineResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_machine**
+> V1MachineResponse update_machine(body)
+
+updates a machine. if the machine was changed since this one was read, a conflict is returned
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+body = metal_python.V1MachineUpdateRequest() # V1MachineUpdateRequest | 
+
+try:
+    # updates a machine. if the machine was changed since this one was read, a conflict is returned
+    api_response = api_instance.update_machine(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MachineApi->update_machine: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1MachineUpdateRequest**](V1MachineUpdateRequest.md)|  | 
 
 ### Return type
 
