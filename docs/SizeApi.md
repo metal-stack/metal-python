@@ -209,7 +209,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.SizeApi(metal_python.ApiClient(configuration))
-body = metal_python.V1MachineHardwareExtended() # V1MachineHardwareExtended | 
+body = metal_python.V1MachineHardware() # V1MachineHardware | 
 
 try:
     # Searches all sizes for one to match the given hardwarespecs. If nothing is found, a list of entries is returned which describe the constraint which did not match
@@ -223,7 +223,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1MachineHardwareExtended**](V1MachineHardwareExtended.md)|  | 
+ **body** | [**V1MachineHardware**](V1MachineHardware.md)|  | 
 
 ### Return type
 
