@@ -267,7 +267,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.ImageApi(metal_python.ApiClient(configuration))
-show_usage = false # object | include image usage into response (optional) (default to false)
+show_usage = false # bool | include image usage into response (optional) (default to false)
 
 try:
     # get all images
@@ -281,7 +281,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **show_usage** | [**object**](.md)| include image usage into response | [optional] [default to false]
+ **show_usage** | **bool**| include image usage into response | [optional] [default to false]
 
 ### Return type
 

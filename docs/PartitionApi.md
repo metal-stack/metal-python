@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**delete_partition**](PartitionApi.md#delete_partition) | **DELETE** /v1/partition/{id} | deletes a Partition and returns the deleted entity
 [**find_partition**](PartitionApi.md#find_partition) | **GET** /v1/partition/{id} | get Partition by id
 [**list_partitions**](PartitionApi.md#list_partitions) | **GET** /v1/partition | get all Partitions
-[**partition_capacity**](PartitionApi.md#partition_capacity) | **GET** /v1/partition/capacity | get Partition capacity
-[**partition_capacity_0**](PartitionApi.md#partition_capacity_0) | **POST** /v1/partition/capacity | get partition capacity
+[**partition_capacity**](PartitionApi.md#partition_capacity) | **POST** /v1/partition/capacity | get partition capacity
+[**partition_capacity_compat**](PartitionApi.md#partition_capacity_compat) | **GET** /v1/partition/capacity | get partition capacity
 [**update_partition**](PartitionApi.md#update_partition) | **POST** /v1/partition | updates a Partition. if the Partition was changed since this one was read, a conflict is returned
 
 
@@ -238,60 +238,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partition_capacity**
-> list[V1PartitionCapacity] partition_capacity()
-
-get Partition capacity
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
-
-try:
-    # get Partition capacity
-    api_response = api_instance.partition_capacity()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling PartitionApi->partition_capacity: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**list[V1PartitionCapacity]**](V1PartitionCapacity.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **partition_capacity_0**
-> list[V1PartitionCapacity] partition_capacity_0(body)
+> list[V1PartitionCapacity] partition_capacity(body)
 
 get partition capacity
 
@@ -320,10 +267,10 @@ body = metal_python.V1PartitionCapacityRequest() # V1PartitionCapacityRequest |
 
 try:
     # get partition capacity
-    api_response = api_instance.partition_capacity_0(body)
+    api_response = api_instance.partition_capacity(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PartitionApi->partition_capacity_0: %s\n" % e)
+    print("Exception when calling PartitionApi->partition_capacity: %s\n" % e)
 ```
 
 ### Parameters
@@ -331,6 +278,59 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**V1PartitionCapacityRequest**](V1PartitionCapacityRequest.md)|  | 
+
+### Return type
+
+[**list[V1PartitionCapacity]**](V1PartitionCapacity.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **partition_capacity_compat**
+> list[V1PartitionCapacity] partition_capacity_compat()
+
+get partition capacity
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.PartitionApi(metal_python.ApiClient(configuration))
+
+try:
+    # get partition capacity
+    api_response = api_instance.partition_capacity_compat()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PartitionApi->partition_capacity_compat: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 
