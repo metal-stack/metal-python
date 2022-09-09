@@ -19,3 +19,4 @@ from metal_python.api.switch_api import SwitchApi
 from metal_python.api.tenant_api import TenantApi
 from metal_python.api.user_api import UserApi
 from metal_python.api.version_api import VersionApi
+from metal_python.api.vpn_api import VpnApi
