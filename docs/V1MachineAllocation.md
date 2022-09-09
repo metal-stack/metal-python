@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **ssh_pub_keys** | **list[str]** | the public ssh keys to access the machine with | 
 **succeeded** | **bool** | if the allocation of the machine was successful, this is set to true | 
 **user_data** | **str** | userdata to execute post installation tasks | [optional] 
+**vpn** | [**V1MachineVPN**](V1MachineVPN.md) | vpn connection info for machine | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
