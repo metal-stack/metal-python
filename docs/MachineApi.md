@@ -4,21 +4,16 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**abort_reinstall_machine**](MachineApi.md#abort_reinstall_machine) | **POST** /v1/machine/{id}/abort-reinstall | abort reinstall this machine
-[**add_provisioning_event**](MachineApi.md#add_provisioning_event) | **POST** /v1/machine/{id}/event | adds a machine provisioning event
-[**add_provisioning_events**](MachineApi.md#add_provisioning_events) | **POST** /v1/machine/event | adds machine provisioning events
 [**allocate_machine**](MachineApi.md#allocate_machine) | **POST** /v1/machine/allocate | allocate a machine
 [**chassis_identify_led_off**](MachineApi.md#chassis_identify_led_off) | **POST** /v1/machine/{id}/power/chassis-identify-led-off | sends a power-off to the chassis identify LED
 [**chassis_identify_led_on**](MachineApi.md#chassis_identify_led_on) | **POST** /v1/machine/{id}/power/chassis-identify-led-on | sends a power-on to the chassis identify LED
 [**delete_machine**](MachineApi.md#delete_machine) | **DELETE** /v1/machine/{id} | deletes a machine from the database
-[**finalize_allocation**](MachineApi.md#finalize_allocation) | **POST** /v1/machine/{id}/finalize-allocation | finalize the allocation of the machine by reconfiguring the switch, sent on successful image installation
 [**find_ipmi_machine**](MachineApi.md#find_ipmi_machine) | **GET** /v1/machine/{id}/ipmi | returns a machine including the ipmi connection data
 [**find_ipmi_machines**](MachineApi.md#find_ipmi_machines) | **POST** /v1/machine/ipmi/find | returns machines including the ipmi connection data
 [**find_machine**](MachineApi.md#find_machine) | **GET** /v1/machine/{id} | get machine by id
 [**find_machines**](MachineApi.md#find_machines) | **POST** /v1/machine/find | find machines by multiple criteria
 [**free_machine**](MachineApi.md#free_machine) | **DELETE** /v1/machine/{id}/free | free a machine
 [**get_machine_console_password**](MachineApi.md#get_machine_console_password) | **GET** /v1/machine/consolepassword | get consolepassword for machine by id
-[**get_provisioning_event_container**](MachineApi.md#get_provisioning_event_container) | **GET** /v1/machine/{id}/event | get the current machine provisioning event container
 [**ipmi_report**](MachineApi.md#ipmi_report) | **POST** /v1/machine/ipmi | reports IPMI ip addresses leased by a management server for machines
 [**list_machines**](MachineApi.md#list_machines) | **GET** /v1/machine | get all known machines
 [**machine_bios**](MachineApi.md#machine_bios) | **POST** /v1/machine/{id}/power/bios | boots machine into BIOS
@@ -28,188 +23,11 @@ Method | HTTP request | Description
 [**machine_on**](MachineApi.md#machine_on) | **POST** /v1/machine/{id}/power/on | sends a power-on to the machine
 [**machine_pxe**](MachineApi.md#machine_pxe) | **POST** /v1/machine/{id}/power/pxe | boots machine from PXE
 [**machine_reset**](MachineApi.md#machine_reset) | **POST** /v1/machine/{id}/power/reset | sends a reset to the machine
-[**register_machine**](MachineApi.md#register_machine) | **POST** /v1/machine/register | register a machine
 [**reinstall_machine**](MachineApi.md#reinstall_machine) | **POST** /v1/machine/{id}/reinstall | reinstall this machine
-[**set_chassis_identify_led_state**](MachineApi.md#set_chassis_identify_led_state) | **POST** /v1/machine/{id}/chassis-identify-led-state | set the state of a chassis identify LED
 [**set_machine_state**](MachineApi.md#set_machine_state) | **POST** /v1/machine/{id}/state | set the state of a machine
 [**update_firmware**](MachineApi.md#update_firmware) | **POST** /v1/machine/update-firmware/{id} | sends a firmware command to the machine
 [**update_machine**](MachineApi.md#update_machine) | **POST** /v1/machine | updates a machine. if the machine was changed since this one was read, a conflict is returned
 
-
-# **abort_reinstall_machine**
-> V1BootInfo abort_reinstall_machine(id, body)
-
-abort reinstall this machine
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-id = 'id_example' # str | identifier of the machine
-body = metal_python.V1MachineAbortReinstallRequest() # V1MachineAbortReinstallRequest | 
-
-try:
-    # abort reinstall this machine
-    api_response = api_instance.abort_reinstall_machine(id, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->abort_reinstall_machine: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| identifier of the machine | 
- **body** | [**V1MachineAbortReinstallRequest**](V1MachineAbortReinstallRequest.md)|  | 
-
-### Return type
-
-[**V1BootInfo**](V1BootInfo.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **add_provisioning_event**
-> V1MachineRecentProvisioningEvents add_provisioning_event(id, body)
-
-adds a machine provisioning event
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-id = 'id_example' # str | identifier of the machine
-body = metal_python.V1MachineProvisioningEvent() # V1MachineProvisioningEvent | 
-
-try:
-    # adds a machine provisioning event
-    api_response = api_instance.add_provisioning_event(id, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->add_provisioning_event: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| identifier of the machine | 
- **body** | [**V1MachineProvisioningEvent**](V1MachineProvisioningEvent.md)|  | 
-
-### Return type
-
-[**V1MachineRecentProvisioningEvents**](V1MachineRecentProvisioningEvents.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **add_provisioning_events**
-> V1MachineRecentProvisioningEventsResponse add_provisioning_events(body)
-
-adds machine provisioning events
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-body = metal_python.V1MachineProvisioningEvents() # V1MachineProvisioningEvents | 
-
-try:
-    # adds machine provisioning events
-    api_response = api_instance.add_provisioning_events(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->add_provisioning_events: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1MachineProvisioningEvents**](V1MachineProvisioningEvents.md)|  | 
-
-### Return type
-
-[**V1MachineRecentProvisioningEventsResponse**](V1MachineRecentProvisioningEventsResponse.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **allocate_machine**
 > V1MachineResponse allocate_machine(body)
@@ -431,65 +249,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the machine | 
-
-### Return type
-
-[**V1MachineResponse**](V1MachineResponse.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **finalize_allocation**
-> V1MachineResponse finalize_allocation(id, body)
-
-finalize the allocation of the machine by reconfiguring the switch, sent on successful image installation
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-id = 'id_example' # str | identifier of the machine
-body = metal_python.V1MachineFinalizeAllocationRequest() # V1MachineFinalizeAllocationRequest | 
-
-try:
-    # finalize the allocation of the machine by reconfiguring the switch, sent on successful image installation
-    api_response = api_instance.finalize_allocation(id, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->finalize_allocation: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| identifier of the machine | 
- **body** | [**V1MachineFinalizeAllocationRequest**](V1MachineFinalizeAllocationRequest.md)|  | 
 
 ### Return type
 
@@ -836,63 +595,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1MachineConsolePasswordResponse**](V1MachineConsolePasswordResponse.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_provisioning_event_container**
-> V1MachineRecentProvisioningEvents get_provisioning_event_container(id)
-
-get the current machine provisioning event container
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-id = 'id_example' # str | identifier of the machine
-
-try:
-    # get the current machine provisioning event container
-    api_response = api_instance.get_provisioning_event_container(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->get_provisioning_event_container: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| identifier of the machine | 
-
-### Return type
-
-[**V1MachineRecentProvisioningEvents**](V1MachineRecentProvisioningEvents.md)
 
 ### Authorization
 
@@ -1428,63 +1130,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **register_machine**
-> V1MachineResponse register_machine(body)
-
-register a machine
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-body = metal_python.V1MachineRegisterRequest() # V1MachineRegisterRequest | 
-
-try:
-    # register a machine
-    api_response = api_instance.register_machine(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->register_machine: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1MachineRegisterRequest**](V1MachineRegisterRequest.md)|  | 
-
-### Return type
-
-[**V1MachineResponse**](V1MachineResponse.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **reinstall_machine**
 > V1MachineResponse reinstall_machine(id, body)
 
@@ -1528,65 +1173,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the machine | 
  **body** | [**V1MachineReinstallRequest**](V1MachineReinstallRequest.md)|  | 
-
-### Return type
-
-[**V1MachineResponse**](V1MachineResponse.md)
-
-### Authorization
-
-[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **set_chassis_identify_led_state**
-> V1MachineResponse set_chassis_identify_led_state(id, body)
-
-set the state of a chassis identify LED
-
-### Example
-```python
-from __future__ import print_function
-import time
-import metal_python
-from metal_python.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: HMAC
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-# Configure API key authorization: jwt
-configuration = metal_python.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
-id = 'id_example' # str | identifier of the machine
-body = metal_python.V1ChassisIdentifyLEDState() # V1ChassisIdentifyLEDState | 
-
-try:
-    # set the state of a chassis identify LED
-    api_response = api_instance.set_chassis_identify_led_state(id, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling MachineApi->set_chassis_identify_led_state: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| identifier of the machine | 
- **body** | [**V1ChassisIdentifyLEDState**](V1ChassisIdentifyLEDState.md)|  | 
 
 ### Return type
 
