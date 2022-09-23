@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ephemeral** | **bool** | specifies if auth key should be ephemeral | 
 **expiration** | **int** | expiration time | [optional] 
 **pid** | **str** | project ID | 
 

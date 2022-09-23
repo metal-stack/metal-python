@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **size** | [**V1SizeResponse**](V1SizeResponse.md) | the size of this machine | [optional] 
 **state** | [**V1MachineState**](V1MachineState.md) | the state of this machine | 
 **tags** | **list[str]** | tags for this machine | 
+**vpn** | [**V1MachineVPN**](V1MachineVPN.md) | vpn connection info for machine | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
