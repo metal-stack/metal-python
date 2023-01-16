@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **interface** | **str** |  | 
 **mac** | **str** |  | 
 **password** | **str** |  | 
+**powermetric** | [**V1PowerMetric**](V1PowerMetric.md) |  | 
 **powerstate** | **str** |  | 
 **user** | **str** |  | 
 

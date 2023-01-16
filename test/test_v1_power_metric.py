@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import metal_python
-from metal_python.models.v1_filesystem_layout_constraints import V1FilesystemLayoutConstraints  # noqa: E501
+from metal_python.models.v1_power_metric import V1PowerMetric  # noqa: E501
 from metal_python.rest import ApiException
 
 
-class TestV1FilesystemLayoutConstraints(unittest.TestCase):
-    """V1FilesystemLayoutConstraints unit test stubs"""
+class TestV1PowerMetric(unittest.TestCase):
+    """V1PowerMetric unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestV1FilesystemLayoutConstraints(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1FilesystemLayoutConstraints(self):
-        """Test V1FilesystemLayoutConstraints"""
+    def testV1PowerMetric(self):
+        """Test V1PowerMetric"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = metal_python.models.v1_filesystem_layout_constraints.V1FilesystemLayoutConstraints()  # noqa: E501
+        # model = metal_python.models.v1_power_metric.V1PowerMetric()  # noqa: E501
         pass
 
 
