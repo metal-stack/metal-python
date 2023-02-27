@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_switch**](SwitchApi.md#delete_switch) | **DELETE** /v1/switch/{id} | deletes an switch and returns the deleted entity
 [**find_switch**](SwitchApi.md#find_switch) | **GET** /v1/switch/{id} | get switch by id
+[**find_switches**](SwitchApi.md#find_switches) | **POST** /v1/switch/find | get all switches that match given properties
 [**list_switches**](SwitchApi.md#list_switches) | **GET** /v1/switch | get all switches
 [**notify_switch**](SwitchApi.md#notify_switch) | **POST** /v1/switch/{id}/notify | notify the metal-api about a configuration change of a switch
 [**register_switch**](SwitchApi.md#register_switch) | **POST** /v1/switch/register | register a switch
@@ -114,6 +115,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1SwitchResponse**](V1SwitchResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **find_switches**
+> list[V1SwitchResponse] find_switches(body)
+
+get all switches that match given properties
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
+body = metal_python.V1SwitchFindRequest() # V1SwitchFindRequest | 
+
+try:
+    # get all switches that match given properties
+    api_response = api_instance.find_switches(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->find_switches: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1SwitchFindRequest**](V1SwitchFindRequest.md)|  | 
+
+### Return type
+
+[**list[V1SwitchResponse]**](V1SwitchResponse.md)
 
 ### Authorization
 
