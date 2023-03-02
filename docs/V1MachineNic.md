@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**identifier** | **str** | the unique identifier of this network interface | 
 **mac** | **str** | the mac address of this network interface | 
 **name** | **str** | the name of this network interface | 
 **neighbors** | [**list[V1MachineNic]**](V1MachineNic.md) | the neighbors visible to this network interface | 
