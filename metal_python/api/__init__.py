@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 # import apis into api package
 from metal_python.api.partition_api import PartitionApi
+from metal_python.api.audit_api import AuditApi
 from metal_python.api.filesystemlayout_api import FilesystemlayoutApi
 from metal_python.api.firewall_api import FirewallApi
 from metal_python.api.firmware_api import FirmwareApi
