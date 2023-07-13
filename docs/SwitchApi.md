@@ -238,7 +238,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notify_switch**
-> V1SwitchResponse notify_switch(id, body)
+> V1SwitchNotifyResponse notify_switch(id, body)
 
 notify the metal-api about a configuration change of a switch
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SwitchResponse**](V1SwitchResponse.md)
+[**V1SwitchNotifyResponse**](V1SwitchNotifyResponse.md)
 
 ### Authorization
 
