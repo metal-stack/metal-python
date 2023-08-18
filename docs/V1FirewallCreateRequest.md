@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **name** | **str** | a readable name for this entity | [optional] 
 **networks** | [**list[V1MachineAllocationNetwork]**](V1MachineAllocationNetwork.md) | the networks that this machine will be placed in. | [optional] 
 **partitionid** | **str** | the partition id to assign this machine to | 
+**placement_tags** | **list[str]** | by default machines are spread across the racks inside a partition for every project. if placement tags are provided, the machine candidate has an additional anti-affinity to other machines having the same tags | [optional] 
 **projectid** | **str** | the project id to assign this machine to | 
 **sizeid** | **str** | the size id to assign this machine to | 
 **ssh_pub_keys** | **list[str]** | the public ssh keys to access the machine with | 
