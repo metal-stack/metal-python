@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **bmcversion** | **str** |  | 
 **fru** | [**V1MachineFru**](V1MachineFru.md) |  | 
 **interface** | **str** |  | 
+**last_updated** | **datetime** |  | 
 **mac** | **str** |  | 
 **password** | **str** |  | 
 **powermetric** | [**V1PowerMetric**](V1PowerMetric.md) |  | 
