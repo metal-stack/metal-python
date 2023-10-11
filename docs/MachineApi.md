@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**free_machine**](MachineApi.md#free_machine) | **DELETE** /v1/machine/{id}/free | free a machine
 [**get_machine_console_password**](MachineApi.md#get_machine_console_password) | **GET** /v1/machine/consolepassword | get consolepassword for machine by id
 [**ipmi_report**](MachineApi.md#ipmi_report) | **POST** /v1/machine/ipmi | reports IPMI ip addresses leased by a management server for machines
+[**issues**](MachineApi.md#issues) | **POST** /v1/machine/issues/evaluate | returns machine issues
+[**list_issues**](MachineApi.md#list_issues) | **GET** /v1/machine/issues | returns the list of issues that exist in the API
 [**list_machines**](MachineApi.md#list_machines) | **GET** /v1/machine | get all known machines
 [**machine_bios**](MachineApi.md#machine_bios) | **POST** /v1/machine/{id}/power/bios | boots machine into BIOS
 [**machine_cycle**](MachineApi.md#machine_cycle) | **POST** /v1/machine/{id}/power/cycle | sends a power cycle to the machine
@@ -652,6 +654,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1MachineIpmiReportResponse**](V1MachineIpmiReportResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **issues**
+> list[V1MachineIssueResponse] issues(body)
+
+returns machine issues
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+body = metal_python.V1MachineIssuesRequest() # V1MachineIssuesRequest | 
+
+try:
+    # returns machine issues
+    api_response = api_instance.issues(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MachineApi->issues: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1MachineIssuesRequest**](V1MachineIssuesRequest.md)|  | 
+
+### Return type
+
+[**list[V1MachineIssueResponse]**](V1MachineIssueResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_issues**
+> list[V1MachineIssue] list_issues()
+
+returns the list of issues that exist in the API
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.MachineApi(metal_python.ApiClient(configuration))
+
+try:
+    # returns the list of issues that exist in the API
+    api_response = api_instance.list_issues()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MachineApi->list_issues: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[V1MachineIssue]**](V1MachineIssue.md)
 
 ### Authorization
 
