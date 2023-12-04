@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **builddate** | **str** |  | 
 **gitsha1** | **str** |  | 
+**min_client_version** | **str** |  | 
 **name** | **str** |  | 
 **revision** | **str** |  | 
 **version** | **str** |  | 
