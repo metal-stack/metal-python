@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**delete_size**](SizeApi.md#delete_size) | **DELETE** /v1/size/{id} | deletes an size and returns the deleted entity
 [**find_size**](SizeApi.md#find_size) | **GET** /v1/size/{id} | get size by id
 [**from_hardware**](SizeApi.md#from_hardware) | **POST** /v1/size/from-hardware | Searches all sizes for one to match the given hardwarespecs. If nothing is found, a list of entries is returned which describe the constraint which did not match
+[**list_size_reservations**](SizeApi.md#list_size_reservations) | **POST** /v1/size/reservations | get all size reservations
 [**list_sizes**](SizeApi.md#list_sizes) | **GET** /v1/size | get all sizes
 [**suggest**](SizeApi.md#suggest) | **POST** /v1/size/suggest | from a given machine id returns the appropriate size
 [**update_size**](SizeApi.md#update_size) | **POST** /v1/size | updates a size. if the size was changed since this one was read, a conflict is returned
@@ -229,6 +230,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1SizeMatchingLog**](V1SizeMatchingLog.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_size_reservations**
+> list[V1SizeReservationResponse] list_size_reservations()
+
+get all size reservations
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.SizeApi(metal_python.ApiClient(configuration))
+
+try:
+    # get all size reservations
+    api_response = api_instance.list_size_reservations()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SizeApi->list_size_reservations: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[V1SizeReservationResponse]**](V1SizeReservationResponse.md)
 
 ### Authorization
 
