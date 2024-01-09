@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_size_reservations**
-> list[V1SizeReservationResponse] list_size_reservations()
+> list[V1SizeReservationResponse] list_size_reservations(body)
 
 get all size reservations
 
@@ -268,17 +268,21 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.SizeApi(metal_python.ApiClient(configuration))
+body = metal_python.V1EmptyBody() # V1EmptyBody | 
 
 try:
     # get all size reservations
-    api_response = api_instance.list_size_reservations()
+    api_response = api_instance.list_size_reservations(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SizeApi->list_size_reservations: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1EmptyBody**](V1EmptyBody.md)|  | 
 
 ### Return type
 
