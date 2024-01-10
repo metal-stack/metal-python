@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
-**labels** | **dict(str, str)** | free labels that you associate with this network. | 
+**labels** | **dict(str, str)** | free labels that you associate with this size. | 
 **name** | **str** | a readable name for this entity | [optional] 
 **reservations** | [**list[V1SizeReservation]**](V1SizeReservation.md) | reservations for this size, which are considered during machine allocation | [optional] 
 

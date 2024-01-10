@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **created** | **datetime** | the creation time of this entity | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **id** | **str** | the unique ID of this entity | 
+**labels** | **dict(str, str)** | free labels that you associate with this partition | [optional] 
 **mgmtserviceaddress** | **str** | the address to the management service of this partition | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **privatenetworkprefixlength** | **int** | the length of private networks for the machine&#39;s child networks in this partition, default 22 | [optional] 
