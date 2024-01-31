@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allocationuuid** | **str** | a unique identifier for this machine allocation, can be used to distinguish between machine allocations over time. | 
 **boot_info** | [**V1BootInfo**](V1BootInfo.md) | information required for booting the machine from HD | [optional] 
 **created** | **datetime** | the time when the machine was created | 
 **creator** | **str** | email of machine creator | 
