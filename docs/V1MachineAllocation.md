@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **creator** | **str** | email of machine creator | 
 **description** | **str** | a description for this machine | [optional] 
 **filesystemlayout** | [**V1FilesystemLayoutResponse**](V1FilesystemLayoutResponse.md) | filesystemlayout to create on this machine | [optional] 
+**firewall_rules** | [**V1FirewallRules**](V1FirewallRules.md) | a set of firewall rules to apply | 
 **hostname** | **str** | the hostname which will be used when creating the machine | 
 **image** | [**V1ImageResponse**](V1ImageResponse.md) | the image assigned to this machine | [optional] 
 **name** | **str** | the name of the machine | 

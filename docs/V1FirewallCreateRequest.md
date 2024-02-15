@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | a description for this entity | [optional] 
 **filesystemlayoutid** | **str** | the filesystemlayout id to assing to this machine | [optional] 
-**ha** | **bool** | if set to true, this firewall is set up in a High Available manner | [optional] 
+**firewall_rules** | [**V1FirewallRules**](V1FirewallRules.md) | optional egress and ingress firewall rules to deploy during firewall allocation | [optional] 
 **hostname** | **str** | the hostname for the allocated machine (defaults to metal) | [optional] 
 **imageid** | **str** | the image id to assign this machine to | 
 **ips** | **list[str]** | the ips to attach to this machine additionally | [optional] 
