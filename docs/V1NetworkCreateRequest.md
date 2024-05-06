@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **shared** | **bool** | marks a network as shareable. | [optional] 
 **underlay** | **bool** | if set to true, this network can be used for underlay communication | 
 **vrf** | **int** | the vrf this network is associated with | [optional] 
-**vrfshared** | **bool** | if set to true, given vrf can be used by multiple networks, which is sometimes useful for network partioning (default: false) | [optional] 
+**vrfshared** | **bool** | if set to true, given vrf can be used by multiple networks, which is sometimes useful for network partitioning (default: false) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
