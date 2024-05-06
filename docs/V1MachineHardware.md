@@ -4,7 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cpu_cores** | **int** | the number of cpu cores | 
+**cpus** | [**list[V1MetalCPU]**](V1MetalCPU.md) | the cpu details | [optional] 
 **disks** | [**list[V1MachineBlockDevice]**](V1MachineBlockDevice.md) | the list of block devices of this machine | 
+**gpus** | [**list[V1MetalGPU]**](V1MetalGPU.md) | the gpu details | [optional] 
 **memory** | **int** | the total memory of the machine | 
 **nics** | [**list[V1MachineNic]**](V1MachineNic.md) | the list of network interfaces of this machine | 
 
