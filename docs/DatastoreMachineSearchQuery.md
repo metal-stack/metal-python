@@ -19,7 +19,6 @@ Name | Type | Description | Notes
 **fru_product_manufacturer** | **str** |  | [optional] 
 **fru_product_part_number** | **str** |  | [optional] 
 **fru_product_serial** | **str** |  | [optional] 
-**hardware_cpu_cores** | **int** |  | [optional] 
 **hardware_memory** | **int** |  | [optional] 
 **id** | **str** |  | [optional] 
 **ipmi_address** | **str** |  | [optional] 
