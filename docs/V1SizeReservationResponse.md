@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**labels** | **dict(str, str)** | free labels associated with this size reservation. | 
 **partitionid** | **str** | the partition id of this size reservation | 
 **projectallocations** | **int** | the amount of allocations of this project referenced by this size reservation | 
 **projectid** | **str** | the project id of this size reservation | 

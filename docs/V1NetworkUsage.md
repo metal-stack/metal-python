@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **available_ips** | **int** | the total available IPs | 
-**available_prefixes** | **int** | the total available Prefixes | 
+**available_prefixes** | **int** | the total available 2 bit Prefixes | 
 **used_ips** | **int** | the total used IPs | 
 **used_prefixes** | **int** | the total used Prefixes | 
 
