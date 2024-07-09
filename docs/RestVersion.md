@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **gitsha1** | **str** |  | 
 **min_client_version** | **str** |  | 
 **name** | **str** |  | 
+**release_version** | **str** |  | [optional] 
 **revision** | **str** |  | 
 **version** | **str** |  | 
 
