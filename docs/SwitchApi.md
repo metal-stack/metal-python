@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **delete_switch**
-> V1SwitchResponse delete_switch(id)
+> V1SwitchResponse delete_switch(id, force=force)
 
 deletes an switch and returns the deleted entity
 
@@ -41,10 +41,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
 id = 'id_example' # str | identifier of the switch
+force = false # bool | if true switch is deleted with no validation (optional) (default to false)
 
 try:
     # deletes an switch and returns the deleted entity
-    api_response = api_instance.delete_switch(id)
+    api_response = api_instance.delete_switch(id, force=force)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SwitchApi->delete_switch: %s\n" % e)
@@ -55,6 +56,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| identifier of the switch | 
+ **force** | **bool**| if true switch is deleted with no validation | [optional] [default to false]
 
 ### Return type
 

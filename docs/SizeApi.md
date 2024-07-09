@@ -210,7 +210,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = metal_python.SizeApi(metal_python.ApiClient(configuration))
-body = metal_python.V1EmptyBody() # V1EmptyBody | 
+body = metal_python.V1SizeReservationListRequest() # V1SizeReservationListRequest | 
 
 try:
     # get all size reservations
@@ -224,7 +224,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1EmptyBody**](V1EmptyBody.md)|  | 
+ **body** | [**V1SizeReservationListRequest**](V1SizeReservationListRequest.md)|  | 
 
 ### Return type
 
