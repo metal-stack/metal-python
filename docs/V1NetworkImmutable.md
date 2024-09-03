@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**additional_announcable_cid_rs** | **list[str]** | list of cidrs which are added to the route maps per tenant private network, these are typically pod- and service cidrs, can only be set for private super networks | [optional] 
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
 **nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | 
 **parentnetworkid** | **str** | the id of the parent network | [optional] 

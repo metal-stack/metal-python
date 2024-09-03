@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**additional_announcable_cid_rs** | **list[str]** | list of cidrs which are added to the route maps per tenant private network, these are typically pod- and service cidrs, can only be set for private super networks | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
 **id** | **str** | the unique ID of this entity, auto-generated if left empty | 
