@@ -468,7 +468,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_network**
-> V1NetworkResponse update_network(body)
+> V1NetworkResponse update_network(body, force=force)
 
 updates a network. if the network was changed since this one was read, a conflict is returned
 
@@ -494,10 +494,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = metal_python.NetworkApi(metal_python.ApiClient(configuration))
 body = metal_python.V1NetworkUpdateRequest() # V1NetworkUpdateRequest | 
+force = false # bool | if true update forcefully (optional) (default to false)
 
 try:
     # updates a network. if the network was changed since this one was read, a conflict is returned
-    api_response = api_instance.update_network(body)
+    api_response = api_instance.update_network(body, force=force)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NetworkApi->update_network: %s\n" % e)
@@ -508,6 +509,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**V1NetworkUpdateRequest**](V1NetworkUpdateRequest.md)|  | 
+ **force** | **bool**| if true update forcefully | [optional] [default to false]
 
 ### Return type
 
