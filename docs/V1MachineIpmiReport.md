@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **indicator_led_state** | **str** |  | 
 **power_metric** | [**V1PowerMetric**](V1PowerMetric.md) |  | 
 **power_state** | **str** |  | 
+**power_supplies** | [**list[V1PowerSupply]**](V1PowerSupply.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
