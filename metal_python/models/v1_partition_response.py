@@ -35,10 +35,12 @@ class V1PartitionResponse(object):
         'changed': 'datetime',
         'created': 'datetime',
         'description': 'str',
+        'dns_servers': 'list[MetalDNSServer]',
         'id': 'str',
         'labels': 'dict(str, str)',
         'mgmtserviceaddress': 'str',
         'name': 'str',
+        'ntp_servers': 'list[MetalNTPServer]',
         'privatenetworkprefixlength': 'int'
     }
 
@@ -47,24 +49,28 @@ class V1PartitionResponse(object):
         'changed': 'changed',
         'created': 'created',
         'description': 'description',
+        'dns_servers': 'dns_servers',
         'id': 'id',
         'labels': 'labels',
         'mgmtserviceaddress': 'mgmtserviceaddress',
         'name': 'name',
+        'ntp_servers': 'ntp_servers',
         'privatenetworkprefixlength': 'privatenetworkprefixlength'
     }
 
-    def __init__(self, bootconfig=None, changed=None, created=None, description=None, id=None, labels=None, mgmtserviceaddress=None, name=None, privatenetworkprefixlength=None):  # noqa: E501
+    def __init__(self, bootconfig=None, changed=None, created=None, description=None, dns_servers=None, id=None, labels=None, mgmtserviceaddress=None, name=None, ntp_servers=None, privatenetworkprefixlength=None):  # noqa: E501
         """V1PartitionResponse - a model defined in Swagger"""  # noqa: E501
 
         self._bootconfig = None
         self._changed = None
         self._created = None
         self._description = None
+        self._dns_servers = None
         self._id = None
         self._labels = None
         self._mgmtserviceaddress = None
         self._name = None
+        self._ntp_servers = None
         self._privatenetworkprefixlength = None
         self.discriminator = None
 
@@ -75,6 +81,8 @@ class V1PartitionResponse(object):
             self.created = created
         if description is not None:
             self.description = description
+        if dns_servers is not None:
+            self.dns_servers = dns_servers
         self.id = id
         if labels is not None:
             self.labels = labels
@@ -82,6 +90,8 @@ class V1PartitionResponse(object):
             self.mgmtserviceaddress = mgmtserviceaddress
         if name is not None:
             self.name = name
+        if ntp_servers is not None:
+            self.ntp_servers = ntp_servers
         if privatenetworkprefixlength is not None:
             self.privatenetworkprefixlength = privatenetworkprefixlength
 
@@ -180,6 +190,29 @@ class V1PartitionResponse(object):
         self._description = description
 
     @property
+    def dns_servers(self):
+        """Gets the dns_servers of this V1PartitionResponse.  # noqa: E501
+
+        the dns servers for this partition  # noqa: E501
+
+        :return: The dns_servers of this V1PartitionResponse.  # noqa: E501
+        :rtype: list[MetalDNSServer]
+        """
+        return self._dns_servers
+
+    @dns_servers.setter
+    def dns_servers(self, dns_servers):
+        """Sets the dns_servers of this V1PartitionResponse.
+
+        the dns servers for this partition  # noqa: E501
+
+        :param dns_servers: The dns_servers of this V1PartitionResponse.  # noqa: E501
+        :type: list[MetalDNSServer]
+        """
+
+        self._dns_servers = dns_servers
+
+    @property
     def id(self):
         """Gets the id of this V1PartitionResponse.  # noqa: E501
 
@@ -272,6 +305,29 @@ class V1PartitionResponse(object):
         """
 
         self._name = name
+
+    @property
+    def ntp_servers(self):
+        """Gets the ntp_servers of this V1PartitionResponse.  # noqa: E501
+
+        the ntp servers for this partition  # noqa: E501
+
+        :return: The ntp_servers of this V1PartitionResponse.  # noqa: E501
+        :rtype: list[MetalNTPServer]
+        """
+        return self._ntp_servers
+
+    @ntp_servers.setter
+    def ntp_servers(self, ntp_servers):
+        """Sets the ntp_servers of this V1PartitionResponse.
+
+        the ntp servers for this partition  # noqa: E501
+
+        :param ntp_servers: The ntp_servers of this V1PartitionResponse.  # noqa: E501
+        :type: list[MetalNTPServer]
+        """
+
+        self._ntp_servers = ntp_servers
 
     @property
     def privatenetworkprefixlength(self):

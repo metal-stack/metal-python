@@ -32,12 +32,14 @@ class V1MachineAllocateRequest(object):
     """
     swagger_types = {
         'description': 'str',
+        'dns_servers': 'list[MetalDNSServer]',
         'filesystemlayoutid': 'str',
         'hostname': 'str',
         'imageid': 'str',
         'ips': 'list[str]',
         'name': 'str',
         'networks': 'list[V1MachineAllocationNetwork]',
+        'ntp_servers': 'list[MetalNTPServer]',
         'partitionid': 'str',
         'placement_tags': 'list[str]',
         'projectid': 'str',
@@ -50,12 +52,14 @@ class V1MachineAllocateRequest(object):
 
     attribute_map = {
         'description': 'description',
+        'dns_servers': 'dns_servers',
         'filesystemlayoutid': 'filesystemlayoutid',
         'hostname': 'hostname',
         'imageid': 'imageid',
         'ips': 'ips',
         'name': 'name',
         'networks': 'networks',
+        'ntp_servers': 'ntp_servers',
         'partitionid': 'partitionid',
         'placement_tags': 'placement_tags',
         'projectid': 'projectid',
@@ -66,16 +70,18 @@ class V1MachineAllocateRequest(object):
         'uuid': 'uuid'
     }
 
-    def __init__(self, description=None, filesystemlayoutid=None, hostname=None, imageid=None, ips=None, name=None, networks=None, partitionid=None, placement_tags=None, projectid=None, sizeid=None, ssh_pub_keys=None, tags=None, user_data=None, uuid=None):  # noqa: E501
+    def __init__(self, description=None, dns_servers=None, filesystemlayoutid=None, hostname=None, imageid=None, ips=None, name=None, networks=None, ntp_servers=None, partitionid=None, placement_tags=None, projectid=None, sizeid=None, ssh_pub_keys=None, tags=None, user_data=None, uuid=None):  # noqa: E501
         """V1MachineAllocateRequest - a model defined in Swagger"""  # noqa: E501
 
         self._description = None
+        self._dns_servers = None
         self._filesystemlayoutid = None
         self._hostname = None
         self._imageid = None
         self._ips = None
         self._name = None
         self._networks = None
+        self._ntp_servers = None
         self._partitionid = None
         self._placement_tags = None
         self._projectid = None
@@ -88,6 +94,8 @@ class V1MachineAllocateRequest(object):
 
         if description is not None:
             self.description = description
+        if dns_servers is not None:
+            self.dns_servers = dns_servers
         if filesystemlayoutid is not None:
             self.filesystemlayoutid = filesystemlayoutid
         if hostname is not None:
@@ -99,6 +107,8 @@ class V1MachineAllocateRequest(object):
             self.name = name
         if networks is not None:
             self.networks = networks
+        if ntp_servers is not None:
+            self.ntp_servers = ntp_servers
         self.partitionid = partitionid
         if placement_tags is not None:
             self.placement_tags = placement_tags
@@ -134,6 +144,29 @@ class V1MachineAllocateRequest(object):
         """
 
         self._description = description
+
+    @property
+    def dns_servers(self):
+        """Gets the dns_servers of this V1MachineAllocateRequest.  # noqa: E501
+
+        the dns servers used for the machine  # noqa: E501
+
+        :return: The dns_servers of this V1MachineAllocateRequest.  # noqa: E501
+        :rtype: list[MetalDNSServer]
+        """
+        return self._dns_servers
+
+    @dns_servers.setter
+    def dns_servers(self, dns_servers):
+        """Sets the dns_servers of this V1MachineAllocateRequest.
+
+        the dns servers used for the machine  # noqa: E501
+
+        :param dns_servers: The dns_servers of this V1MachineAllocateRequest.  # noqa: E501
+        :type: list[MetalDNSServer]
+        """
+
+        self._dns_servers = dns_servers
 
     @property
     def filesystemlayoutid(self):
@@ -274,6 +307,29 @@ class V1MachineAllocateRequest(object):
         """
 
         self._networks = networks
+
+    @property
+    def ntp_servers(self):
+        """Gets the ntp_servers of this V1MachineAllocateRequest.  # noqa: E501
+
+        the ntp servers used for the machine  # noqa: E501
+
+        :return: The ntp_servers of this V1MachineAllocateRequest.  # noqa: E501
+        :rtype: list[MetalNTPServer]
+        """
+        return self._ntp_servers
+
+    @ntp_servers.setter
+    def ntp_servers(self, ntp_servers):
+        """Sets the ntp_servers of this V1MachineAllocateRequest.
+
+        the ntp servers used for the machine  # noqa: E501
+
+        :param ntp_servers: The ntp_servers of this V1MachineAllocateRequest.  # noqa: E501
+        :type: list[MetalNTPServer]
+        """
+
+        self._ntp_servers = ntp_servers
 
     @property
     def partitionid(self):

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** | a description for this entity | [optional] 
+**dns_servers** | [**list[MetalDNSServer]**](MetalDNSServer.md) | the dns servers used for the machine | [optional] 
 **filesystemlayoutid** | **str** | the filesystemlayout id to assign to this machine | [optional] 
 **firewall_rules** | [**V1FirewallRules**](V1FirewallRules.md) | optional egress and ingress firewall rules to deploy during firewall allocation | [optional] 
 **hostname** | **str** | the hostname for the allocated machine (defaults to metal) | [optional] 
@@ -11,6 +12,7 @@ Name | Type | Description | Notes
 **ips** | **list[str]** | the ips to attach to this machine additionally | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **networks** | [**list[V1MachineAllocationNetwork]**](V1MachineAllocationNetwork.md) | the networks that this machine will be placed in. | [optional] 
+**ntp_servers** | [**list[MetalNTPServer]**](MetalNTPServer.md) | the ntp servers used for the machine | [optional] 
 **partitionid** | **str** | the partition id to assign this machine to | 
 **placement_tags** | **list[str]** | by default machines are spread across the racks inside a partition for every project. if placement tags are provided, the machine candidate has an additional anti-affinity to other machines having the same tags | [optional] 
 **projectid** | **str** | the project id to assign this machine to | 

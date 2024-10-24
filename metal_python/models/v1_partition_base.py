@@ -31,31 +31,64 @@ class V1PartitionBase(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'dns_servers': 'list[MetalDNSServer]',
         'labels': 'dict(str, str)',
         'mgmtserviceaddress': 'str',
+        'ntp_servers': 'list[MetalNTPServer]',
         'privatenetworkprefixlength': 'int'
     }
 
     attribute_map = {
+        'dns_servers': 'dns_servers',
         'labels': 'labels',
         'mgmtserviceaddress': 'mgmtserviceaddress',
+        'ntp_servers': 'ntp_servers',
         'privatenetworkprefixlength': 'privatenetworkprefixlength'
     }
 
-    def __init__(self, labels=None, mgmtserviceaddress=None, privatenetworkprefixlength=None):  # noqa: E501
+    def __init__(self, dns_servers=None, labels=None, mgmtserviceaddress=None, ntp_servers=None, privatenetworkprefixlength=None):  # noqa: E501
         """V1PartitionBase - a model defined in Swagger"""  # noqa: E501
 
+        self._dns_servers = None
         self._labels = None
         self._mgmtserviceaddress = None
+        self._ntp_servers = None
         self._privatenetworkprefixlength = None
         self.discriminator = None
 
+        if dns_servers is not None:
+            self.dns_servers = dns_servers
         if labels is not None:
             self.labels = labels
         if mgmtserviceaddress is not None:
             self.mgmtserviceaddress = mgmtserviceaddress
+        if ntp_servers is not None:
+            self.ntp_servers = ntp_servers
         if privatenetworkprefixlength is not None:
             self.privatenetworkprefixlength = privatenetworkprefixlength
+
+    @property
+    def dns_servers(self):
+        """Gets the dns_servers of this V1PartitionBase.  # noqa: E501
+
+        the dns servers for this partition  # noqa: E501
+
+        :return: The dns_servers of this V1PartitionBase.  # noqa: E501
+        :rtype: list[MetalDNSServer]
+        """
+        return self._dns_servers
+
+    @dns_servers.setter
+    def dns_servers(self, dns_servers):
+        """Sets the dns_servers of this V1PartitionBase.
+
+        the dns servers for this partition  # noqa: E501
+
+        :param dns_servers: The dns_servers of this V1PartitionBase.  # noqa: E501
+        :type: list[MetalDNSServer]
+        """
+
+        self._dns_servers = dns_servers
 
     @property
     def labels(self):
@@ -102,6 +135,29 @@ class V1PartitionBase(object):
         """
 
         self._mgmtserviceaddress = mgmtserviceaddress
+
+    @property
+    def ntp_servers(self):
+        """Gets the ntp_servers of this V1PartitionBase.  # noqa: E501
+
+        the ntp servers for this partition  # noqa: E501
+
+        :return: The ntp_servers of this V1PartitionBase.  # noqa: E501
+        :rtype: list[MetalNTPServer]
+        """
+        return self._ntp_servers
+
+    @ntp_servers.setter
+    def ntp_servers(self, ntp_servers):
+        """Sets the ntp_servers of this V1PartitionBase.
+
+        the ntp servers for this partition  # noqa: E501
+
+        :param ntp_servers: The ntp_servers of this V1PartitionBase.  # noqa: E501
+        :type: list[MetalNTPServer]
+        """
+
+        self._ntp_servers = ntp_servers
 
     @property
     def privatenetworkprefixlength(self):

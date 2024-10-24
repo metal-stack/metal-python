@@ -21,6 +21,8 @@ from metal_python.models.datastore_machine_search_query import DatastoreMachineS
 from metal_python.models.datastore_network_search_query import DatastoreNetworkSearchQuery
 from metal_python.models.datastore_switch_search_query import DatastoreSwitchSearchQuery
 from metal_python.models.httperrors_http_error_response import HttperrorsHTTPErrorResponse
+from metal_python.models.metal_dns_server import MetalDNSServer
+from metal_python.models.metal_ntp_server import MetalNTPServer
 from metal_python.models.rest_health_response import RestHealthResponse
 from metal_python.models.rest_version import RestVersion
 from metal_python.models.v1_audit_find_request import V1AuditFindRequest
