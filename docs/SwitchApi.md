@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**find_switch**](SwitchApi.md#find_switch) | **GET** /v1/switch/{id} | get switch by id
 [**find_switches**](SwitchApi.md#find_switches) | **POST** /v1/switch/find | get all switches that match given properties
 [**list_switches**](SwitchApi.md#list_switches) | **GET** /v1/switch | get all switches
+[**migrate_switch**](SwitchApi.md#migrate_switch) | **POST** /v1/switch/migrate | migrates machine connections from one switch to another
 [**notify_switch**](SwitchApi.md#notify_switch) | **POST** /v1/switch/{id}/notify | notify the metal-api about a configuration change of a switch
 [**register_switch**](SwitchApi.md#register_switch) | **POST** /v1/switch/register | register a switch
 [**toggle_switch_port**](SwitchApi.md#toggle_switch_port) | **POST** /v1/switch/{id}/port | toggles the port of the switch with a nicname to the given state
@@ -228,6 +229,63 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**list[V1SwitchResponse]**](V1SwitchResponse.md)
+
+### Authorization
+
+[HMAC](../README.md#HMAC), [jwt](../README.md#jwt)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **migrate_switch**
+> V1SwitchResponse migrate_switch(body)
+
+migrates machine connections from one switch to another
+
+### Example
+```python
+from __future__ import print_function
+import time
+import metal_python
+from metal_python.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: HMAC
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: jwt
+configuration = metal_python.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = metal_python.SwitchApi(metal_python.ApiClient(configuration))
+body = metal_python.V1SwitchMigrateRequest() # V1SwitchMigrateRequest | 
+
+try:
+    # migrates machine connections from one switch to another
+    api_response = api_instance.migrate_switch(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SwitchApi->migrate_switch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1SwitchMigrateRequest**](V1SwitchMigrateRequest.md)|  | 
+
+### Return type
+
+[**V1SwitchResponse**](V1SwitchResponse.md)
 
 ### Authorization
 
