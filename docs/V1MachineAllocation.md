@@ -8,12 +8,14 @@ Name | Type | Description | Notes
 **created** | **datetime** | the time when the machine was created | 
 **creator** | **str** | email of machine creator | 
 **description** | **str** | a description for this machine | [optional] 
+**dns_servers** | [**list[V1DNSServer]**](V1DNSServer.md) | the dns servers used for the machine | [optional] 
 **filesystemlayout** | [**V1FilesystemLayoutResponse**](V1FilesystemLayoutResponse.md) | filesystemlayout to create on this machine | [optional] 
 **firewall_rules** | [**V1FirewallRules**](V1FirewallRules.md) | a set of firewall rules to apply | [optional] 
 **hostname** | **str** | the hostname which will be used when creating the machine | 
 **image** | [**V1ImageResponse**](V1ImageResponse.md) | the image assigned to this machine | [optional] 
 **name** | **str** | the name of the machine | 
 **networks** | [**list[V1MachineNetwork]**](V1MachineNetwork.md) | the networks of this machine | 
+**ntp_servers** | [**list[V1NTPServer]**](V1NTPServer.md) | the ntp servers used for the machine | [optional] 
 **project** | **str** | the project id that this machine is assigned to | 
 **reinstall** | **bool** | indicates whether to reinstall the machine | 
 **role** | **str** | the role of the machine | 
