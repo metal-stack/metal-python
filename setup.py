@@ -21,7 +21,6 @@ setup(
     install_requires=REQUIRES,
     extras_require=dict(
         dev=[
-            "nose",
             "coverage",
         ]
     ),
