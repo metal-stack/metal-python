@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **length** | **dict(str, int)** | the bit lengths of the prefix to allocate, defaults to the default child prefix lengths of the parent network | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | [optional] 
-**parentnetworkid** | **str** | the parent network from which this network should be allocated | 
 **partitionid** | **str** | the partition this network belongs to | [optional] 
 **projectid** | **str** | the project id this network belongs to, can be empty if globally available | [optional] 
 **shared** | **bool** | marks a network as shareable. | [optional] 
