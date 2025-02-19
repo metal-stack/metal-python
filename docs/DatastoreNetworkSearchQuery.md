@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**addressfamily** | **str** |  | [optional] 
 **destinationprefixes** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **labels** | **dict(str, str)** |  | [optional] 

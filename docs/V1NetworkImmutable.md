@@ -4,8 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_announcable_cid_rs** | **list[str]** | list of cidrs which are added to the route maps per tenant private network, these are typically pod- and service cidrs, can only be set for private super networks | [optional] 
+**defaultchildprefixlength** | **dict(str, int)** | if privatesuper, this defines the bitlen of child prefixes per addressfamily if not nil | [optional] 
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
-**nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | 
+**nat** | **bool** | if set to true, packets leaving this ipv4 network get masqueraded behind interface ip | 
 **parentnetworkid** | **str** | the id of the parent network | [optional] 
 **prefixes** | **list[str]** | the prefixes of this network | 
 **privatesuper** | **bool** | if set to true, this network will serve as a partition&#39;s super network for the internal machine networks,there can only be one privatesuper network per partition | 
