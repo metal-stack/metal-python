@@ -4,12 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_announcable_cid_rs** | **list[str]** | list of cidrs which are added to the route maps per tenant private network, these are typically pod- and service cidrs, can only be set for private super networks | [optional] 
+**defaultchildprefixlength** | **dict(str, int)** | if privatesuper, this defines the bitlen of child prefixes per addressfamily if not nil | [optional] 
 **description** | **str** | a description for this entity | [optional] 
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
 **id** | **str** | the unique ID of this entity, auto-generated if left empty | 
 **labels** | **dict(str, str)** | free labels that you associate with this network. | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
-**nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | 
+**nat** | **bool** | if set to true, packets leaving this ipv4 network get masqueraded behind interface ip | 
 **parentnetworkid** | **str** | the id of the parent network | [optional] 
 **partitionid** | **str** | the partition this network belongs to | [optional] 
 **prefixes** | **list[str]** | the prefixes of this network | 

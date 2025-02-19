@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**addressfamily** | **str** | the addressfamily to allocate a ip address from the given network, defaults to IPv4 | 
 **description** | **str** | a description for this entity | [optional] 
 **machineid** | **str** | the machine id this ip should be associated with | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
