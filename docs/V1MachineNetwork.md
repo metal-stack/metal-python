@@ -7,10 +7,13 @@ Name | Type | Description | Notes
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
 **ips** | **list[str]** | the ip addresses of the allocated machine in this vrf | 
 **nat** | **bool** | if set to true, packets leaving this network get masqueraded behind interface ip | 
+**nattypev2** | **str** |  | 
 **networkid** | **str** | the networkID of the allocated machine in this vrf | 
 **networktype** | **str** | the network type, types can be looked up in the network package of metal-lib | 
+**networktypev2** | **str** |  | 
 **prefixes** | **list[str]** | the prefixes of this network | 
 **private** | **bool** | indicates whether this network is the private network of this machine | 
+**projectid** | **str** | project of this network, empty string if not project scoped | 
 **underlay** | **bool** | if set to true, this network can be used for underlay communication | 
 **vrf** | **int** | the vrf of the allocated machine | 
 

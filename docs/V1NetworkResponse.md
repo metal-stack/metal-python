@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **labels** | **dict(str, str)** | free labels that you associate with this network. | [optional] 
 **name** | **str** | a readable name for this entity | [optional] 
 **nat** | **bool** | if set to true, packets leaving this ipv4 network get masqueraded behind interface ip | 
+**nattype** | **str** | apiv2 nat type | 
+**networktype** | **str** | apiv2 network type | 
 **parentnetworkid** | **str** | the id of the parent network | [optional] 
 **partitionid** | **str** | the partition this network belongs to | [optional] 
 **prefixes** | **list[str]** | the prefixes of this network | 
