@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **defaultchildprefixlength** | **dict(str, int)** | if privatesuper, this defines the bitlen of child prefixes per addressfamily if not nil | [optional] 
 **destinationprefixes** | **list[str]** | the destination prefixes of this network | 
 **nat** | **bool** | if set to true, packets leaving this ipv4 network get masqueraded behind interface ip | 
+**nattype** | **str** | apiv2 nat type | 
+**networktype** | **str** | apiv2 network type | 
 **parentnetworkid** | **str** | the id of the parent network | [optional] 
 **prefixes** | **list[str]** | the prefixes of this network | 
 **privatesuper** | **bool** | if set to true, this network will serve as a partition&#39;s super network for the internal machine networks,there can only be one privatesuper network per partition | 
