@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **only** | **list[str]** | a list of machine issues to include | 
 **partition_id** | **str** |  | [optional] 
 **rackid** | **str** |  | [optional] 
+**roomid** | **str** |  | [optional] 
 **severity** | **str** | filters issue for given severity | 
 **sizeid** | **str** |  | [optional] 
 **state_value** | **str** |  | [optional] 

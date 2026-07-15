@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **osversion** | **str** |  | [optional] 
 **partitionid** | **str** |  | [optional] 
 **rackid** | **str** |  | [optional] 
+**roomid** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actual** | **str** | the current state of the nic | 
+**admin_status** | **str** | the desired state of the nic | [optional] 
 **bgp_port_state** | [**MetalSwitchBGPPortState**](MetalSwitchBGPPortState.md) | the current bgp port state | [optional] 
 **filter** | [**V1BGPFilter**](V1BGPFilter.md) | configures the bgp filter applied at the switch port | [optional] 
 **identifier** | **str** | the identifier of this network interface | 
