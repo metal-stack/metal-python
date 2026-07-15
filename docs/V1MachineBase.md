@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **liveliness** | **str** | the liveliness of this machine | 
 **partition** | [**V1PartitionResponse**](V1PartitionResponse.md) | the partition assigned to this machine | [optional] 
 **rackid** | **str** | the rack assigned to this machine | [optional] 
+**roomid** | **str** | the room assigned to this machine | [optional] 
 **size** | [**V1SizeResponse**](V1SizeResponse.md) | the size of this machine | [optional] 
 **state** | [**V1MachineState**](V1MachineState.md) | the state of this machine | 
 **tags** | **list[str]** | tags for this machine | 

@@ -40,6 +40,7 @@ Name | Type | Description | Notes
 **nics_vrfs** | **list[str]** |  | [optional] 
 **partition_id** | **str** |  | [optional] 
 **rackid** | **str** |  | [optional] 
+**roomid** | **str** |  | [optional] 
 **sizeid** | **str** |  | [optional] 
 **state_value** | **str** |  | [optional] 
 **tags** | **list[str]** |  | [optional] 
